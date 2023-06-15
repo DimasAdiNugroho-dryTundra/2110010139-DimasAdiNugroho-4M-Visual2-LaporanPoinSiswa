@@ -1,9 +1,9 @@
-object User: TUser
-  Left = 192
-  Top = 125
-  Width = 1044
-  Height = 540
-  Caption = 'User'
+object userLogin: TuserLogin
+  Left = -8
+  Top = -8
+  Width = 1552
+  Height = 880
+  Caption = 'userLogin'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

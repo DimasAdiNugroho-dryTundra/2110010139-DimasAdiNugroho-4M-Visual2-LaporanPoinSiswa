@@ -2,12 +2,12 @@ program LaporanPoinSiswa;
 
 uses
   Forms,
-  Unit_user in 'Unit_user.pas' {User};
+  formUserLogin in 'formUserLogin.pas' {userLogin};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TUser, User);
+  Application.CreateForm(TuserLogin, userLogin);
   Application.Run;
 end.

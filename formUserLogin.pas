@@ -1,4 +1,4 @@
-unit Unit_user;
+unit formUserLogin;
 
 interface
 
@@ -7,7 +7,7 @@ uses
   Dialogs;
 
 type
-  TUser = class(TForm)
+  TuserLogin = class(TForm)
   private
     { Private declarations }
   public
@@ -15,7 +15,7 @@ type
   end;
 
 var
-  User: TUser;
+  userLogin: TuserLogin;
 
 implementation
 
