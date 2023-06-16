@@ -1,8 +1,8 @@
 object userLogin: TuserLogin
-  Left = -8
-  Top = -8
-  Width = 1552
-  Height = 880
+  Left = 192
+  Top = 125
+  Width = 359
+  Height = 309
   Caption = 'userLogin'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,4 +13,70 @@ object userLogin: TuserLogin
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
+  object Label2: TLabel
+    Left = 120
+    Top = 104
+    Width = 78
+    Height = 19
+    Caption = 'Password'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 120
+    Top = 32
+    Width = 82
+    Height = 19
+    Caption = 'Username'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object EditUsername: TEdit
+    Left = 96
+    Top = 64
+    Width = 137
+    Height = 27
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+  end
+  object EditPassword: TEdit
+    Left = 96
+    Top = 136
+    Width = 137
+    Height = 27
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+  end
+  object ButtonLogin: TButton
+    Left = 120
+    Top = 184
+    Width = 81
+    Height = 33
+    Caption = 'Login'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+  end
 end

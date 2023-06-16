@@ -4,10 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs;
+  Dialogs, StdCtrls;
 
 type
   TuserLogin = class(TForm)
+    EditUsername: TEdit;
+    EditPassword: TEdit;
+    Label2: TLabel;
+    Label1: TLabel;
+    ButtonLogin: TButton;
   private
     { Private declarations }
   public
