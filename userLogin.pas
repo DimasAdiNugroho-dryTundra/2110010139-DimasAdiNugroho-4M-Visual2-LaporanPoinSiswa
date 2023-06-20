@@ -27,7 +27,7 @@ var
 implementation
 
 uses
-  Connection, DB;
+  Connection, DB, Admin;
 
 {$R *.dfm}
 
@@ -57,6 +57,7 @@ begin
           if (loginLevel = 'admin') then
             begin
               ShowMessage('Anda Login Sebagai Admin');
+              formAdmin.ShowModal;
             end
           else if (loginLevel = 'guru') then
             begin
