@@ -1,9 +1,9 @@
 object formAdmin: TformAdmin
-  Left = 192
-  Top = 125
-  Width = 1044
+  Left = 277
+  Top = 170
+  Width = 909
   Height = 540
-  Caption = 'ADMIN'
+  Caption = 'Admin'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,4 +13,157 @@ object formAdmin: TformAdmin
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
+  object Label1: TLabel
+    Left = 352
+    Top = 80
+    Width = 165
+    Height = 23
+    Caption = 'ADMIN SEKOLAH'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object GrupBox1: TGroupBox
+    Left = 56
+    Top = 184
+    Width = 233
+    Height = 265
+    Caption = 'Administrasi User'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+    TabOrder = 0
+    object Button1: TButton
+      Left = 56
+      Top = 128
+      Width = 113
+      Height = 33
+      Caption = 'User'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+  object GrupBox2: TGroupBox
+    Left = 328
+    Top = 184
+    Width = 233
+    Height = 265
+    Caption = 'Administrasi Siswa'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+    TabOrder = 1
+    object Button2: TButton
+      Left = 56
+      Top = 64
+      Width = 113
+      Height = 33
+      Caption = 'Siswa'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Button3: TButton
+      Left = 56
+      Top = 128
+      Width = 113
+      Height = 33
+      Caption = 'Orang Tua'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+    end
+    object Button4: TButton
+      Left = 56
+      Top = 192
+      Width = 113
+      Height = 33
+      Caption = 'Hubungan'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object GrupBox3: TGroupBox
+    Left = 600
+    Top = 184
+    Width = 233
+    Height = 265
+    Caption = 'Administrasi Sekolah'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+    TabOrder = 2
+    object Button5: TButton
+      Left = 56
+      Top = 64
+      Width = 113
+      Height = 33
+      Caption = 'Wali Kelas'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Button6: TButton
+      Left = 56
+      Top = 128
+      Width = 113
+      Height = 33
+      Caption = 'Kelas'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+    end
+    object Button7: TButton
+      Left = 56
+      Top = 192
+      Width = 113
+      Height = 33
+      Caption = 'Poin'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
 end
