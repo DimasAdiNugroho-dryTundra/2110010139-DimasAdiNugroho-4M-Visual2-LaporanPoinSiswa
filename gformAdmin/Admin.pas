@@ -11,7 +11,7 @@ type
     GrupBox1: TGroupBox;
     GrupBox2: TGroupBox;
     GrupBox3: TGroupBox;
-    Button1: TButton;
+    ButtonAdminToUser: TButton;
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
@@ -19,6 +19,7 @@ type
     Button6: TButton;
     Button7: TButton;
     Label1: TLabel;
+    procedure ButtonAdminToUserClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,6 +31,14 @@ var
 
 implementation
 
+uses
+  UserAdmin;
+
 {$R *.dfm}
+
+procedure TformAdmin.ButtonAdminToUserClick(Sender: TObject);
+begin
+  formUserAdmin.ShowModal;
+end;
 
 end.

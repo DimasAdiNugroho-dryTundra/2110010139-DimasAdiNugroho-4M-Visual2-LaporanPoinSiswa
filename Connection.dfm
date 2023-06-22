@@ -1,7 +1,7 @@
 object formConnection: TformConnection
   Left = 192
   Top = 125
-  Width = 226
+  Width = 511
   Height = 540
   Caption = 'Connection'
   Color = clBtnFace
@@ -20,6 +20,30 @@ object formConnection: TformConnection
     Height = 105
     Caption = 'userLogin'
     TabOrder = 0
+  end
+  object grbAdmin: TGroupBox
+    Left = 208
+    Top = 72
+    Width = 249
+    Height = 321
+    Caption = 'Admin'
+    TabOrder = 1
+    object grbUserAdmin: TGroupBox
+      Left = 32
+      Top = 32
+      Width = 185
+      Height = 105
+      Caption = 'userAdmin'
+      TabOrder = 0
+    end
+    object grbKelasAdmin: TGroupBox
+      Left = 32
+      Top = 160
+      Width = 185
+      Height = 105
+      Caption = 'kelasAdmin'
+      TabOrder = 1
+    end
   end
   object Zconn: TZConnection
     ControlsCodePage = cGET_ACP
@@ -53,5 +77,32 @@ object formConnection: TformConnection
     Params = <>
     Left = 120
     Top = 104
+  end
+  object dsUserAdmin: TDataSource
+    DataSet = zqUserAdmin
+    Left = 272
+    Top = 144
+  end
+  object zqUserAdmin: TZQuery
+    Connection = Zconn
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM user')
+    Params = <>
+    Left = 360
+    Top = 144
+  end
+  object dsKelasAdmin: TDataSource
+    DataSet = zqKelasAdmin
+    Left = 272
+    Top = 272
+  end
+  object zqKelasAdmin: TZQuery
+    Connection = Zconn
+    SQL.Strings = (
+      'SELECT * FROM kelas')
+    Params = <>
+    Left = 360
+    Top = 272
   end
 end

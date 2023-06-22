@@ -13,6 +13,13 @@ type
     grbUserLogin: TGroupBox;
     dsUserLogin: TDataSource;
     zqUserLogin: TZQuery;
+    grbAdmin: TGroupBox;
+    grbUserAdmin: TGroupBox;
+    dsUserAdmin: TDataSource;
+    zqUserAdmin: TZQuery;
+    grbKelasAdmin: TGroupBox;
+    dsKelasAdmin: TDataSource;
+    zqKelasAdmin: TZQuery;
   private
     { Private declarations }
   public
