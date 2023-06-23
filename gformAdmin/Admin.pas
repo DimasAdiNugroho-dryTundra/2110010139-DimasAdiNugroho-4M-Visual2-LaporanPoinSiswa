@@ -11,15 +11,16 @@ type
     GrupBox1: TGroupBox;
     GrupBox2: TGroupBox;
     GrupBox3: TGroupBox;
-    ButtonAdminToUser: TButton;
+    buttonAdminToUser: TButton;
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
     Button5: TButton;
-    Button6: TButton;
+    buttonAdminToKelas: TButton;
     Button7: TButton;
     Label1: TLabel;
-    procedure ButtonAdminToUserClick(Sender: TObject);
+    procedure buttonAdminToUserClick(Sender: TObject);
+    procedure buttonAdminToKelasClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,13 +33,19 @@ var
 implementation
 
 uses
-  UserAdmin;
+  UserAdmin,
+  Kelas;
 
 {$R *.dfm}
 
-procedure TformAdmin.ButtonAdminToUserClick(Sender: TObject);
+procedure TformAdmin.buttonAdminToUserClick(Sender: TObject);
 begin
   formUserAdmin.ShowModal;
+end;
+
+procedure TformAdmin.buttonAdminToKelasClick(Sender: TObject);
+begin
+  formKelas.ShowModal;
 end;
 
 end.

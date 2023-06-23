@@ -39,7 +39,7 @@ object formAdmin: TformAdmin
     Font.Style = [fsBold, fsItalic]
     ParentFont = False
     TabOrder = 0
-    object ButtonAdminToUser: TButton
+    object buttonAdminToUser: TButton
       Left = 56
       Top = 128
       Width = 113
@@ -52,7 +52,7 @@ object formAdmin: TformAdmin
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 0
-      OnClick = ButtonAdminToUserClick
+      OnClick = buttonAdminToUserClick
     end
   end
   object GrupBox2: TGroupBox
@@ -138,7 +138,7 @@ object formAdmin: TformAdmin
       ParentFont = False
       TabOrder = 0
     end
-    object Button6: TButton
+    object buttonAdminToKelas: TButton
       Left = 56
       Top = 128
       Width = 113
@@ -151,6 +151,7 @@ object formAdmin: TformAdmin
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 1
+      OnClick = buttonAdminToKelasClick
     end
     object Button7: TButton
       Left = 56
