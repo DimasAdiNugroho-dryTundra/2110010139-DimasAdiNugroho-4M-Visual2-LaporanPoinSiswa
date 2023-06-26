@@ -124,7 +124,7 @@ object formAdmin: TformAdmin
     Font.Style = [fsBold, fsItalic]
     ParentFont = False
     TabOrder = 2
-    object Button5: TButton
+    object buttonAdminToWaliKelas: TButton
       Left = 56
       Top = 64
       Width = 113
@@ -137,6 +137,7 @@ object formAdmin: TformAdmin
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 0
+      OnClick = buttonAdminToWaliKelasClick
     end
     object buttonAdminToKelas: TButton
       Left = 56
