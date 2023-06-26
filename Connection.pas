@@ -23,6 +23,9 @@ type
     grbPoinAdmin: TGroupBox;
     zqPoinAdmin: TZQuery;
     dsPoinAdmin: TDataSource;
+    grbWaliKelas: TGroupBox;
+    dsWaliKelas: TDataSource;
+    zqWaliKelas: TZQuery;
   private
     { Private declarations }
   public

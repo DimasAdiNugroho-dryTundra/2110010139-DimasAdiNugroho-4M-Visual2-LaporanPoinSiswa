@@ -1,7 +1,7 @@
 object formConnection: TformConnection
   Left = 192
   Top = 125
-  Width = 511
+  Width = 1016
   Height = 540
   Caption = 'Connection'
   Color = clBtnFace
@@ -24,7 +24,7 @@ object formConnection: TformConnection
   object grbAdmin: TGroupBox
     Left = 208
     Top = 72
-    Width = 249
+    Width = 489
     Height = 409
     Caption = 'Admin'
     TabOrder = 1
@@ -51,6 +51,14 @@ object formConnection: TformConnection
       Height = 105
       Caption = 'Poin'
       TabOrder = 2
+    end
+    object grbWaliKelas: TGroupBox
+      Left = 240
+      Top = 32
+      Width = 185
+      Height = 105
+      Caption = 'WaliKelas'
+      TabOrder = 3
     end
   end
   object Zconn: TZConnection
@@ -126,5 +134,19 @@ object formConnection: TformConnection
     DataSet = zqPoinAdmin
     Left = 272
     Top = 400
+  end
+  object dsWaliKelas: TDataSource
+    DataSet = zqWaliKelas
+    Left = 480
+    Top = 144
+  end
+  object zqWaliKelas: TZQuery
+    Connection = Zconn
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM wali_kelas')
+    Params = <>
+    Left = 568
+    Top = 144
   end
 end
