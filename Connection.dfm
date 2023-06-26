@@ -115,6 +115,7 @@ object formConnection: TformConnection
   end
   object zqPoinAdmin: TZQuery
     Connection = Zconn
+    Active = True
     SQL.Strings = (
       'SELECT * FROM poin')
     Params = <>
