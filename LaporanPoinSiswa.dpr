@@ -6,7 +6,8 @@ uses
   Connection in 'Connection.pas' {formConnection},
   Admin in 'gformAdmin\Admin.pas' {formAdmin},
   UserAdmin in 'gformAdmin\admin_formUserAdmin\UserAdmin.pas' {formUserAdmin},
-  Kelas in 'gformAdmin\admin_formKelas\Kelas.pas' {formKelas};
+  Kelas in 'gformAdmin\admin_formKelas\Kelas.pas' {formKelas},
+  Poin in 'gformAdmin\admin_formPoin\Poin.pas' {formPoin};
 
 {$R *.res}
 
@@ -17,5 +18,6 @@ begin
   Application.CreateForm(TformAdmin, formAdmin);
   Application.CreateForm(TformUserAdmin, formUserAdmin);
   Application.CreateForm(TformKelas, formKelas);
+  Application.CreateForm(TformPoin, formPoin);
   Application.Run;
 end.

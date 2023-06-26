@@ -153,7 +153,7 @@ object formAdmin: TformAdmin
       TabOrder = 1
       OnClick = buttonAdminToKelasClick
     end
-    object Button7: TButton
+    object buttonAdminToPoin: TButton
       Left = 56
       Top = 192
       Width = 113
@@ -166,6 +166,7 @@ object formAdmin: TformAdmin
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 2
+      OnClick = buttonAdminToPoinClick
     end
   end
 end

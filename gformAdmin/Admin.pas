@@ -17,10 +17,11 @@ type
     Button4: TButton;
     Button5: TButton;
     buttonAdminToKelas: TButton;
-    Button7: TButton;
+    buttonAdminToPoin: TButton;
     Label1: TLabel;
     procedure buttonAdminToUserClick(Sender: TObject);
     procedure buttonAdminToKelasClick(Sender: TObject);
+    procedure buttonAdminToPoinClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,7 +35,9 @@ implementation
 
 uses
   UserAdmin,
-  Kelas;
+  Kelas,
+  Poin;
+
 
 {$R *.dfm}
 
@@ -46,6 +49,11 @@ end;
 procedure TformAdmin.buttonAdminToKelasClick(Sender: TObject);
 begin
   formKelas.ShowModal;
+end;
+
+procedure TformAdmin.buttonAdminToPoinClick(Sender: TObject);
+begin
+  formPoin.ShowModal;
 end;
 
 end.
