@@ -25,7 +25,7 @@ object formConnection: TformConnection
     Left = 208
     Top = 72
     Width = 249
-    Height = 321
+    Height = 409
     Caption = 'Admin'
     TabOrder = 1
     object grbUserAdmin: TGroupBox
@@ -41,8 +41,16 @@ object formConnection: TformConnection
       Top = 160
       Width = 185
       Height = 105
-      Caption = 'kelasAdmin'
+      Caption = 'Kelas'
       TabOrder = 1
+    end
+    object grbPoinAdmin: TGroupBox
+      Left = 32
+      Top = 288
+      Width = 185
+      Height = 105
+      Caption = 'Poin'
+      TabOrder = 2
     end
   end
   object Zconn: TZConnection
@@ -104,5 +112,18 @@ object formConnection: TformConnection
     Params = <>
     Left = 360
     Top = 272
+  end
+  object zqPoinAdmin: TZQuery
+    Connection = Zconn
+    SQL.Strings = (
+      'SELECT * FROM poin')
+    Params = <>
+    Left = 360
+    Top = 400
+  end
+  object dsPoinAdmin: TDataSource
+    DataSet = zqPoinAdmin
+    Left = 272
+    Top = 400
   end
 end

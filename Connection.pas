@@ -20,6 +20,9 @@ type
     grbKelasAdmin: TGroupBox;
     dsKelasAdmin: TDataSource;
     zqKelasAdmin: TZQuery;
+    grbPoinAdmin: TGroupBox;
+    zqPoinAdmin: TZQuery;
+    dsPoinAdmin: TDataSource;
   private
     { Private declarations }
   public
