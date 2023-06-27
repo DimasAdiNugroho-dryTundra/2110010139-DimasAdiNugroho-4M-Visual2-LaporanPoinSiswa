@@ -8,7 +8,8 @@ uses
   UserAdmin in 'gformAdmin\admin_formUserAdmin\UserAdmin.pas' {formUserAdmin},
   Kelas in 'gformAdmin\admin_formKelas\Kelas.pas' {formKelas},
   Poin in 'gformAdmin\admin_formPoin\Poin.pas' {formPoin},
-  WaliKelas in 'gformAdmin\admin_formWaliKelas\WaliKelas.pas' {formWaliKelas};
+  WaliKelas in 'gformAdmin\admin_formWaliKelas\WaliKelas.pas' {formWaliKelas},
+  Report in 'Report.pas' {formReport};
 
 {$R *.res}
 
@@ -21,5 +22,6 @@ begin
   Application.CreateForm(TformKelas, formKelas);
   Application.CreateForm(TformPoin, formPoin);
   Application.CreateForm(TformWaliKelas, formWaliKelas);
+  Application.CreateForm(TformReport, formReport);
   Application.Run;
 end.
