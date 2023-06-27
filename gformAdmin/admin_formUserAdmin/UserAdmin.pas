@@ -21,10 +21,12 @@ type
     buttonEdit: TButton;
     buttonHapus: TButton;
     buttonTambah: TButton;
+    buttonLaporan: TButton;
     procedure dgUserCellClick(Column: TColumn);
     procedure buttonEditClick(Sender: TObject);
     procedure buttonHapusClick(Sender: TObject);
     procedure buttonTambahClick(Sender: TObject);
+    procedure buttonLaporanClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,7 +40,8 @@ var
 implementation
 
 uses
-  Connection;
+  Connection,
+  Report;
 
 {$R *.dfm}
 
@@ -146,6 +149,11 @@ formConnection.zqUserAdmin.ExecSQL;
 formConnection.zqKelasAdmin.SQL.Clear;
 formConnection.zqKelasAdmin.SQL.Add('SELECT * FROM user');
 formConnection.zqKelasAdmin.ExecSQL;
+end;
+
+procedure TformUserAdmin.buttonLaporanClick(Sender: TObject);
+begin
+formReport.frxRptUserAdmin.ShowReport();
 end;
 
 end.

@@ -10,8 +10,8 @@ type
   TformReport = class(TForm)
     GroupBox1: TGroupBox;
     GroupBox2: TGroupBox;
-    frxRptUserAdmin: TfrxReport;
     frxDsUserAdmin: TfrxDBDataset;
+    frxRptUserAdmin: TfrxReport;
   private
     { Private declarations }
   public

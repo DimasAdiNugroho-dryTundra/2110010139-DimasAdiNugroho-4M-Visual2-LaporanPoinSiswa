@@ -199,4 +199,19 @@ object formUserAdmin: TformUserAdmin
     TabOrder = 4
     OnClick = buttonTambahClick
   end
+  object buttonLaporan: TButton
+    Left = 560
+    Top = 56
+    Width = 105
+    Height = 41
+    Caption = 'LAPORAN'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+    OnClick = buttonLaporanClick
+  end
 end
