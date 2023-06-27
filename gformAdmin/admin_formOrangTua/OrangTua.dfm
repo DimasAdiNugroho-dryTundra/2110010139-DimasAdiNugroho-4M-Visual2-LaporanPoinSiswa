@@ -2,7 +2,7 @@ object formOrangTua: TformOrangTua
   Left = 192
   Top = 125
   Width = 1044
-  Height = 492
+  Height = 524
   Caption = 'Orang Tua'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -30,7 +30,7 @@ object formOrangTua: TformOrangTua
     Left = 40
     Top = 40
     Width = 409
-    Height = 377
+    Height = 409
     Caption = 'Orang Tua'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -119,10 +119,23 @@ object formOrangTua: TformOrangTua
     end
     object Label7: TLabel
       Left = 24
-      Top = 320
+      Top = 360
       Width = 112
       Height = 19
       Caption = 'Jenis Kelamin'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label8: TLabel
+      Left = 24
+      Top = 328
+      Width = 57
+      Height = 19
+      Caption = 'Agama'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -204,7 +217,7 @@ object formOrangTua: TformOrangTua
     end
     object cmbJK: TComboBox
       Left = 168
-      Top = 320
+      Top = 360
       Width = 193
       Height = 27
       ItemHeight = 19
@@ -212,6 +225,19 @@ object formOrangTua: TformOrangTua
       Items.Strings = (
         'Laki-laki'
         'Perempuan')
+    end
+    object txtAgama: TEdit
+      Left = 168
+      Top = 320
+      Width = 193
+      Height = 27
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 7
     end
   end
   object buttonEdit: TButton

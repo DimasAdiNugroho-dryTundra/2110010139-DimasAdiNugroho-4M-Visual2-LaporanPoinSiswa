@@ -22,6 +22,10 @@ type
     GroupBox2: TGroupBox;
     DBGrid2: TDBGrid;
     DBGrid3: TDBGrid;
+    buttonEdit: TButton;
+    buttonHapus: TButton;
+    buttonTambah: TButton;
+    buttonLaporan: TButton;
   private
     { Private declarations }
   public

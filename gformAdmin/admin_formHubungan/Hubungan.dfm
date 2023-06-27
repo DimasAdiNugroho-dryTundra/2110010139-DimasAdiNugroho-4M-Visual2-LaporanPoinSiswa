@@ -1,7 +1,7 @@
 object formHubungan: TformHubungan
   Left = 192
   Top = 125
-  Width = 1044
+  Width = 965
   Height = 540
   Caption = 'Hubungan'
   Color = clBtnFace
@@ -15,8 +15,8 @@ object formHubungan: TformHubungan
   TextHeight = 13
   object DBGrid1: TDBGrid
     Left = 56
-    Top = 264
-    Width = 497
+    Top = 272
+    Width = 513
     Height = 193
     DataSource = formConnection.dsHubungan
     TabOrder = 0
@@ -31,7 +31,7 @@ object formHubungan: TformHubungan
     Top = 40
     Width = 361
     Height = 201
-    Caption = 'Kelas'
+    Caption = 'Hubungan'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -146,7 +146,7 @@ object formHubungan: TformHubungan
   end
   object GroupBox1: TGroupBox
     Left = 616
-    Top = 56
+    Top = 64
     Width = 297
     Height = 169
     Caption = 'Data Siswa'
@@ -173,7 +173,7 @@ object formHubungan: TformHubungan
   end
   object GroupBox2: TGroupBox
     Left = 616
-    Top = 264
+    Top = 272
     Width = 297
     Height = 169
     Caption = 'Data Orang Tua'
@@ -197,5 +197,61 @@ object formHubungan: TformHubungan
       TitleFont.Name = 'Tahoma'
       TitleFont.Style = []
     end
+  end
+  object buttonEdit: TButton
+    Left = 464
+    Top = 48
+    Width = 105
+    Height = 41
+    Caption = 'EDIT'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+  end
+  object buttonHapus: TButton
+    Left = 464
+    Top = 160
+    Width = 105
+    Height = 41
+    Caption = 'HAPUS'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+  end
+  object buttonTambah: TButton
+    Left = 464
+    Top = 104
+    Width = 105
+    Height = 41
+    Caption = 'TAMBAH'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 6
+  end
+  object buttonLaporan: TButton
+    Left = 464
+    Top = 216
+    Width = 105
+    Height = 41
+    Caption = 'LAPORAN'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 7
   end
 end

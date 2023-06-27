@@ -28,6 +28,8 @@ type
     buttonHapus: TButton;
     buttonTambah: TButton;
     buttonLaporan: TButton;
+    txtAgama: TEdit;
+    Label8: TLabel;
   private
     { Private declarations }
   public
