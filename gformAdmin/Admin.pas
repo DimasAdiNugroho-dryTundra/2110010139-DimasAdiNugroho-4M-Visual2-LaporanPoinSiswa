@@ -12,9 +12,9 @@ type
     GrupBox2: TGroupBox;
     GrupBox3: TGroupBox;
     buttonAdminToUser: TButton;
-    Button2: TButton;
-    Button3: TButton;
-    Button4: TButton;
+    buttonAdminToSiswa: TButton;
+    buttonAdminToOrangTua: TButton;
+    buttonAdminToHubungan: TButton;
     buttonAdminToWaliKelas: TButton;
     buttonAdminToKelas: TButton;
     buttonAdminToPoin: TButton;
@@ -23,6 +23,9 @@ type
     procedure buttonAdminToKelasClick(Sender: TObject);
     procedure buttonAdminToPoinClick(Sender: TObject);
     procedure buttonAdminToWaliKelasClick(Sender: TObject);
+    procedure buttonAdminToSiswaClick(Sender: TObject);
+    procedure buttonAdminToOrangTuaClick(Sender: TObject);
+    procedure buttonAdminToHubunganClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,7 +41,10 @@ uses
   UserAdmin,
   WaliKelas,
   Kelas,
-  Poin;
+  Poin,
+  Siswa,
+  OrangTua,
+  Hubungan;
 
 
 {$R *.dfm}
@@ -61,6 +67,21 @@ end;
 procedure TformAdmin.buttonAdminToWaliKelasClick(Sender: TObject);
 begin
   formWaliKelas.ShowModal;
+end;
+
+procedure TformAdmin.buttonAdminToSiswaClick(Sender: TObject);
+begin
+   formSiswa.ShowModal;
+end;
+
+procedure TformAdmin.buttonAdminToOrangTuaClick(Sender: TObject);
+begin
+  formOrangTua.ShowModal;
+end;
+
+procedure TformAdmin.buttonAdminToHubunganClick(Sender: TObject);
+begin
+ formHubungan.ShowModal;
 end;
 
 end.

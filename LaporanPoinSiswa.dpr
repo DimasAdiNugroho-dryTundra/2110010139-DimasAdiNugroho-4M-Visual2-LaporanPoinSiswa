@@ -9,7 +9,10 @@ uses
   Kelas in 'gformAdmin\admin_formKelas\Kelas.pas' {formKelas},
   Poin in 'gformAdmin\admin_formPoin\Poin.pas' {formPoin},
   WaliKelas in 'gformAdmin\admin_formWaliKelas\WaliKelas.pas' {formWaliKelas},
-  Report in 'Report.pas' {formReport};
+  Report in 'Report.pas' {formReport},
+  Siswa in 'gformAdmin\admin_formSiswa\Siswa.pas' {formSiswa},
+  OrangTua in 'gformAdmin\admin_formOrangTua\OrangTua.pas' {formOrangTua},
+  Hubungan in 'gformAdmin\admin_formHubungan\Hubungan.pas' {formHubungan};
 
 {$R *.res}
 
@@ -23,5 +26,8 @@ begin
   Application.CreateForm(TformPoin, formPoin);
   Application.CreateForm(TformWaliKelas, formWaliKelas);
   Application.CreateForm(TformReport, formReport);
+  Application.CreateForm(TformSiswa, formSiswa);
+  Application.CreateForm(TformOrangTua, formOrangTua);
+  Application.CreateForm(TformHubungan, formHubungan);
   Application.Run;
 end.
