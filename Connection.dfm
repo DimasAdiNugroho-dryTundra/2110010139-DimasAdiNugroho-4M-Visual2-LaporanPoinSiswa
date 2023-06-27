@@ -111,6 +111,7 @@ object formConnection: TformConnection
   end
   object zqUserLogin: TZQuery
     Connection = Zconn
+    Active = True
     SQL.Strings = (
       'select * from user')
     Params = <>

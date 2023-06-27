@@ -13,4 +13,17 @@ object formOrangTua: TformOrangTua
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 152
+    Top = 312
+    Width = 320
+    Height = 120
+    DataSource = formConnection.dsOrangTua
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
 end
