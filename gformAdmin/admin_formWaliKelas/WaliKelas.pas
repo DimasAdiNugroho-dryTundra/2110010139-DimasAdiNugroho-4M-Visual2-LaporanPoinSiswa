@@ -13,14 +13,23 @@ type
     Label3: TLabel;
     Label2: TLabel;
     Label1: TLabel;
-    buttonEdit: TButton;
-    buttonTambah: TButton;
-    buttonHapus: TButton;
     DBGrid1: TDBGrid;
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
+    txtNIKNIP: TEdit;
+    txtNama: TEdit;
+    cmbJK: TComboBox;
+    txtAlamat: TMemo;
+    txtTelp: TEdit;
+    txtMatPel: TEdit;
+    txtPendidikan: TEdit;
+    buttonEdit: TButton;
+    buttonHapus: TButton;
+    buttonTambah: TButton;
+    buttonLaporan: TButton;
+    txtStatus: TEdit;
   private
     { Private declarations }
   public

@@ -18,6 +18,10 @@ type
     txtIDOrtu: TEdit;
     txtStatus: TEdit;
     txtKeterangan: TEdit;
+    buttonEdit: TButton;
+    buttonHapus: TButton;
+    buttonTambah: TButton;
+    buttonLaporan: TButton;
   private
     { Private declarations }
   public

@@ -1,7 +1,7 @@
 object formSiswa: TformSiswa
   Left = 235
   Top = 159
-  Width = 1044
+  Width = 612
   Height = 540
   Caption = 'Siswa'
   Color = clBtnFace
@@ -14,10 +14,10 @@ object formSiswa: TformSiswa
   PixelsPerInch = 96
   TextHeight = 13
   object DBGrid1: TDBGrid
-    Left = 72
-    Top = 360
-    Width = 320
-    Height = 120
+    Left = 56
+    Top = 280
+    Width = 361
+    Height = 177
     DataSource = formConnection.dsSiswa
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
@@ -143,5 +143,61 @@ object formSiswa: TformSiswa
       ParentFont = False
       TabOrder = 3
     end
+  end
+  object buttonEdit: TButton
+    Left = 440
+    Top = 48
+    Width = 105
+    Height = 41
+    Caption = 'EDIT'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+  end
+  object buttonHapus: TButton
+    Left = 440
+    Top = 160
+    Width = 105
+    Height = 41
+    Caption = 'HAPUS'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+  end
+  object buttonTambah: TButton
+    Left = 440
+    Top = 104
+    Width = 105
+    Height = 41
+    Caption = 'TAMBAH'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+  end
+  object buttonLaporan: TButton
+    Left = 440
+    Top = 216
+    Width = 105
+    Height = 41
+    Caption = 'LAPORAN'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
   end
 end
