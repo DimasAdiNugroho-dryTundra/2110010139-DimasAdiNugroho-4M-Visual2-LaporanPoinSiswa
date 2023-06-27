@@ -24,7 +24,7 @@ object formConnection: TformConnection
   object grbAdmin: TGroupBox
     Left = 208
     Top = 72
-    Width = 489
+    Width = 729
     Height = 409
     Caption = 'Admin'
     TabOrder = 1
@@ -59,6 +59,30 @@ object formConnection: TformConnection
       Height = 105
       Caption = 'WaliKelas'
       TabOrder = 3
+    end
+    object grbSiswa: TGroupBox
+      Left = 240
+      Top = 160
+      Width = 185
+      Height = 105
+      Caption = 'Siswa'
+      TabOrder = 4
+    end
+    object grbOrangTua: TGroupBox
+      Left = 240
+      Top = 288
+      Width = 185
+      Height = 105
+      Caption = 'Orang Tua'
+      TabOrder = 5
+    end
+    object grbHubungan: TGroupBox
+      Left = 448
+      Top = 32
+      Width = 185
+      Height = 105
+      Caption = 'Hubungan'
+      TabOrder = 6
     end
   end
   object Zconn: TZConnection
@@ -147,6 +171,48 @@ object formConnection: TformConnection
       'SELECT * FROM wali_kelas')
     Params = <>
     Left = 568
+    Top = 144
+  end
+  object dsSiswa: TDataSource
+    DataSet = zqSiswa
+    Left = 480
+    Top = 272
+  end
+  object zqSiswa: TZQuery
+    Connection = Zconn
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM siswa')
+    Params = <>
+    Left = 568
+    Top = 272
+  end
+  object zqOrangTua: TZQuery
+    Connection = Zconn
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM ortu')
+    Params = <>
+    Left = 568
+    Top = 400
+  end
+  object zqHubungan: TZQuery
+    Connection = Zconn
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM hubungan')
+    Params = <>
+    Left = 784
+    Top = 144
+  end
+  object dsOrangTua: TDataSource
+    DataSet = zqOrangTua
+    Left = 480
+    Top = 400
+  end
+  object dsHubungan: TDataSource
+    DataSet = zqHubungan
+    Left = 688
     Top = 144
   end
 end

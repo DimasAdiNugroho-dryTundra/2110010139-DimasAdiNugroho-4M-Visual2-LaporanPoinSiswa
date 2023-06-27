@@ -16,7 +16,7 @@ object formUserAdmin: TformUserAdmin
   object dgUser: TDBGrid
     Left = 64
     Top = 280
-    Width = 465
+    Width = 609
     Height = 177
     DataSource = formConnection.dsUserAdmin
     TabOrder = 0

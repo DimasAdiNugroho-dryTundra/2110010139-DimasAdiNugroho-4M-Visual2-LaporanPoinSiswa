@@ -26,6 +26,15 @@ type
     grbWaliKelas: TGroupBox;
     dsWaliKelas: TDataSource;
     zqWaliKelas: TZQuery;
+    grbSiswa: TGroupBox;
+    dsSiswa: TDataSource;
+    zqSiswa: TZQuery;
+    grbOrangTua: TGroupBox;
+    grbHubungan: TGroupBox;
+    zqOrangTua: TZQuery;
+    zqHubungan: TZQuery;
+    dsOrangTua: TDataSource;
+    dsHubungan: TDataSource;
   private
     { Private declarations }
   public
