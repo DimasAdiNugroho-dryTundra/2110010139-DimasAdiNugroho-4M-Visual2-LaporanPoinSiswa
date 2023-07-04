@@ -14,6 +14,7 @@ type
     Label1: TLabel;
     buttonLogin: TButton;
     DBGrid1: TDBGrid;
+    lblGetID: TLabel;
     procedure buttonLoginClick(Sender: TObject);
   private
     { Private declarations }
@@ -27,13 +28,16 @@ var
 implementation
 
 uses
-  Connection, DB, Admin;
+  Connection,
+  DB,
+  Admin,
+  DataDiri;
 
 {$R *.dfm}
 
 procedure TformUserLogin.buttonLoginClick(Sender: TObject);
 var
-  nama, password, level, loginLevel, querylogin: string;
+  nama, password, level, loginLevel, querylogin, userid: string;
   sts: integer;
 begin
   nama := editUsername.Text;
@@ -56,6 +60,8 @@ begin
           loginLevel := formConnection.zqUserLogin.FieldValues['level'];
           if (loginLevel = 'admin') then
             begin
+              userid := formConnection.zqUserLogin.FieldValues['id'];
+              lblGetID.Caption := userid;
               ShowMessage('Anda Login Sebagai Admin');
               formAdmin.ShowModal;
             end
@@ -65,7 +71,10 @@ begin
             end
           else
             begin
+              userid := formConnection.zqUserLogin.FieldValues['id'];
+              lblGetID.Caption := userid;
               ShowMessage('Anda Login Sebagai Siswa');
+              formDataDiri.ShowModal;
             end;
         end
       else

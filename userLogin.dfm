@@ -39,6 +39,12 @@ object formUserLogin: TformUserLogin
     Font.Style = [fsBold]
     ParentFont = False
   end
+  object lblGetID: TLabel
+    Left = 40
+    Top = 64
+    Width = 3
+    Height = 13
+  end
   object editUsername: TEdit
     Left = 136
     Top = 56
