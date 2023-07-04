@@ -14,8 +14,8 @@ object formReport: TformReport
   PixelsPerInch = 96
   TextHeight = 13
   object GroupBox1: TGroupBox
-    Left = 56
-    Top = 48
+    Left = 264
+    Top = 40
     Width = 377
     Height = 233
     Caption = 'Admin'
@@ -34,8 +34,8 @@ object formReport: TformReport
     CloseDataSource = False
     DataSource = formConnection.dsUserAdmin
     BCDToCurrency = False
-    Left = 200
-    Top = 112
+    Left = 408
+    Top = 104
   end
   object frxRptUserAdmin: TfrxReport
     Version = '4.12.6'
@@ -52,8 +52,8 @@ object formReport: TformReport
       'begin'
       ''
       'end.')
-    Left = 112
-    Top = 112
+    Left = 320
+    Top = 104
     Datasets = <
       item
         DataSet = frxDsUserAdmin
@@ -66,8 +66,8 @@ object formReport: TformReport
       Width = 1000.000000000000000000
     end
     object Page1: TfrxReportPage
-      PaperWidth = 216.000000000000000000
-      PaperHeight = 279.000000000000000000
+      PaperWidth = 215.900000000000000000
+      PaperHeight = 279.400000000000000000
       PaperSize = 1
       LeftMargin = 10.000000000000000000
       RightMargin = 10.000000000000000000

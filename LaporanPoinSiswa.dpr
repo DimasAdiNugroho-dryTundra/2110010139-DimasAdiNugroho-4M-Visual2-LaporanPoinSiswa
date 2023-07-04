@@ -12,7 +12,8 @@ uses
   Report in 'Report.pas' {formReport},
   Siswa in 'gformAdmin\admin_formSiswa\Siswa.pas' {formSiswa},
   OrangTua in 'gformAdmin\admin_formOrangTua\OrangTua.pas' {formOrangTua},
-  Hubungan in 'gformAdmin\admin_formHubungan\Hubungan.pas' {formHubungan};
+  Hubungan in 'gformAdmin\admin_formHubungan\Hubungan.pas' {formHubungan},
+  DataDiri in 'gformSiswa\siswa_formDataDiri\DataDiri.pas' {formDataDiri};
 
 {$R *.res}
 
@@ -29,5 +30,6 @@ begin
   Application.CreateForm(TformSiswa, formSiswa);
   Application.CreateForm(TformOrangTua, formOrangTua);
   Application.CreateForm(TformHubungan, formHubungan);
+  Application.CreateForm(TformDataDiri, formDataDiri);
   Application.Run;
 end.
