@@ -35,6 +35,9 @@ type
     zqHubungan: TZQuery;
     dsOrangTua: TDataSource;
     dsHubungan: TDataSource;
+    GroupBox1: TGroupBox;
+    dsDataDiriSiswa: TDataSource;
+    zqDataDiriSiswa: TZQuery;
   private
     { Private declarations }
   public

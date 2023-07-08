@@ -1,7 +1,7 @@
 object formDataDiri: TformDataDiri
-  Left = 507
-  Top = 235
-  Width = 678
+  Left = 813
+  Top = 257
+  Width = 433
   Height = 390
   Caption = 'Data Diri'
   Color = clBtnFace
@@ -179,10 +179,11 @@ object formDataDiri: TformDataDiri
     OnClick = btnCetakLaporanClick
   end
   object txtGetID: TEdit
-    Left = 456
-    Top = 32
+    Left = 192
+    Top = 8
     Width = 121
     Height = 21
     TabOrder = 6
+    Visible = False
   end
 end

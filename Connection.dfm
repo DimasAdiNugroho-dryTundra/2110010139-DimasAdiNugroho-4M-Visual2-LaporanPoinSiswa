@@ -2,7 +2,7 @@ object formConnection: TformConnection
   Left = 192
   Top = 125
   Width = 1016
-  Height = 540
+  Height = 585
   Caption = 'Connection'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -84,6 +84,14 @@ object formConnection: TformConnection
       Caption = 'Hubungan'
       TabOrder = 6
     end
+  end
+  object GroupBox1: TGroupBox
+    Left = 16
+    Top = 192
+    Width = 161
+    Height = 105
+    Caption = 'Siswa'
+    TabOrder = 2
   end
   object Zconn: TZConnection
     ControlsCodePage = cGET_ACP
@@ -215,5 +223,19 @@ object formConnection: TformConnection
     DataSet = zqHubungan
     Left = 688
     Top = 144
+  end
+  object dsDataDiriSiswa: TDataSource
+    DataSet = zqDataDiriSiswa
+    Left = 48
+    Top = 232
+  end
+  object zqDataDiriSiswa: TZQuery
+    Connection = Zconn
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM siswa')
+    Params = <>
+    Left = 120
+    Top = 208
   end
 end
