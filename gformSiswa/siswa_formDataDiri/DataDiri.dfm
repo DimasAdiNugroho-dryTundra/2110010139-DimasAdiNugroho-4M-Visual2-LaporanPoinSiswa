@@ -1,8 +1,8 @@
 object formDataDiri: TformDataDiri
   Left = 507
   Top = 235
-  Width = 450
-  Height = 325
+  Width = 678
+  Height = 390
   Caption = 'Data Diri'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,14 +11,16 @@ object formDataDiri: TformDataDiri
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnActivate = FormActivate
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 24
     Top = 8
-    Width = 224
+    Width = 146
     Height = 23
-    Caption = 'Data Diri Singkat Siswa'
+    Caption = 'Data Diri Siswa'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -19
@@ -160,5 +162,27 @@ object formDataDiri: TformDataDiri
     ParentFont = False
     ReadOnly = True
     TabOrder = 4
+  end
+  object btnCetakLaporan: TButton
+    Left = 24
+    Top = 280
+    Width = 193
+    Height = 49
+    Caption = 'Cetak Laporan Poin'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+    OnClick = btnCetakLaporanClick
+  end
+  object txtGetID: TEdit
+    Left = 456
+    Top = 32
+    Width = 121
+    Height = 21
+    TabOrder = 6
   end
 end

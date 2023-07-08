@@ -12,6 +12,9 @@ type
     GroupBox2: TGroupBox;
     frxDsUserAdmin: TfrxDBDataset;
     frxRptUserAdmin: TfrxReport;
+    GroupBox3: TGroupBox;
+    frxRptDataDiriSiswa: TfrxReport;
+    frxDsDataDiriSiswa: TfrxDBDataset;
   private
     { Private declarations }
   public

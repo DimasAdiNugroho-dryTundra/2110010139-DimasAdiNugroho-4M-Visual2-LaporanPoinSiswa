@@ -14,19 +14,27 @@ object formReport: TformReport
   PixelsPerInch = 96
   TextHeight = 13
   object GroupBox1: TGroupBox
-    Left = 264
-    Top = 40
-    Width = 377
-    Height = 233
+    Left = 32
+    Top = 32
+    Width = 513
+    Height = 321
     Caption = 'Admin'
     TabOrder = 0
     object GroupBox2: TGroupBox
-      Left = 24
-      Top = 32
+      Left = 40
+      Top = 24
       Width = 185
       Height = 105
       Caption = 'userAdmin'
       TabOrder = 0
+    end
+    object GroupBox3: TGroupBox
+      Left = 40
+      Top = 168
+      Width = 185
+      Height = 105
+      Caption = 'DataDiriSiswa'
+      TabOrder = 1
     end
   end
   object frxDsUserAdmin: TfrxDBDataset
@@ -34,8 +42,8 @@ object formReport: TformReport
     CloseDataSource = False
     DataSource = formConnection.dsUserAdmin
     BCDToCurrency = False
-    Left = 408
-    Top = 104
+    Left = 200
+    Top = 88
   end
   object frxRptUserAdmin: TfrxReport
     Version = '4.12.6'
@@ -45,15 +53,15 @@ object formReport: TformReport
     PreviewOptions.Zoom = 1.000000000000000000
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
-    ReportOptions.CreateDate = 45104.469597824070000000
-    ReportOptions.LastChange = 45104.489339432870000000
+    ReportOptions.CreateDate = 45104.469597824100000000
+    ReportOptions.LastChange = 45104.489339432900000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
       ''
       'end.')
-    Left = 320
-    Top = 104
+    Left = 112
+    Top = 88
     Datasets = <
       item
         DataSet = frxDsUserAdmin
@@ -76,7 +84,7 @@ object formReport: TformReport
       object ReportTitle1: TfrxReportTitle
         Height = 49.133890000000000000
         Top = 18.897650000000000000
-        Width = 740.787880000000000000
+        Width = 740.409927000000000000
         object Memo1: TfrxMemoView
           Left = 272.126160000000000000
           Top = 15.118120000000000000
@@ -98,7 +106,7 @@ object formReport: TformReport
       object PageHeader1: TfrxPageHeader
         Height = 37.795300000000000000
         Top = 90.708720000000000000
-        Width = 740.787880000000000000
+        Width = 740.409927000000000000
         object Memo2: TfrxMemoView
           Left = 60.472480000000000000
           Width = 60.472480000000000000
@@ -188,7 +196,7 @@ object formReport: TformReport
       object MasterData1: TfrxMasterData
         Height = 37.795300000000000000
         Top = 188.976500000000000000
-        Width = 740.787880000000000000
+        Width = 740.409927000000000000
         DataSet = frxDsUserAdmin
         DataSetName = 'frxDBDataset1'
         RowCount = 0
@@ -293,7 +301,7 @@ object formReport: TformReport
       object Footer1: TfrxFooter
         Height = 98.267780000000000000
         Top = 249.448980000000000000
-        Width = 740.787880000000000000
+        Width = 740.409927000000000000
         object Memo14: TfrxMemoView
           Left = 423.307360000000000000
           Width = 162.519790000000000000
@@ -309,12 +317,52 @@ object formReport: TformReport
           Frame.Style = fsDouble
           Frame.Typ = [ftBottom]
           Memo.UTF8 = (
-            'Total Jumlah User'
-            '')
+            'Total Jumlah User')
           ParentFont = False
           VAlign = vaCenter
         end
       end
     end
+  end
+  object frxRptDataDiriSiswa: TfrxReport
+    Version = '4.12.6'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 45115.636108067130000000
+    ReportOptions.LastChange = 45115.636108067130000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 112
+    Top = 224
+    Datasets = <>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 216.000000000000000000
+      PaperHeight = 279.000000000000000000
+      PaperSize = 1
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+    end
+  end
+  object frxDsDataDiriSiswa: TfrxDBDataset
+    UserName = 'frxDBDataset1'
+    CloseDataSource = False
+    BCDToCurrency = False
+    Left = 192
+    Top = 240
   end
 end
