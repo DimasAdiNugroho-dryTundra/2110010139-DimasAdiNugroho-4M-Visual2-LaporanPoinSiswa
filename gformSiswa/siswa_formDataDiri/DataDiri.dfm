@@ -1,6 +1,6 @@
 object formDataDiri: TformDataDiri
-  Left = 813
-  Top = 257
+  Left = 541
+  Top = 242
   Width = 433
   Height = 390
   Caption = 'Data Diri'

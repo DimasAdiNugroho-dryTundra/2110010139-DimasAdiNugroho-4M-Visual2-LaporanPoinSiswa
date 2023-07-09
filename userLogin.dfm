@@ -1,6 +1,6 @@
 object formUserLogin: TformUserLogin
-  Left = 567
-  Top = 226
+  Left = 511
+  Top = 244
   Width = 420
   Height = 421
   Caption = 'userLogin'

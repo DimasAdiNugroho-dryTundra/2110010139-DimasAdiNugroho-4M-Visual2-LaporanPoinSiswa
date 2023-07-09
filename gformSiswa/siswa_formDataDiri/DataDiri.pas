@@ -21,9 +21,9 @@ type
     txtWakel: TEdit;
     btnCetakLaporan: TButton;
     txtGetID: TEdit;
-    procedure btnCetakLaporanClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure btnCetakLaporanClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,6 +32,7 @@ type
 
 var
   formDataDiri: TformDataDiri;
+  userid : string;
 
 implementation
 
@@ -42,14 +43,9 @@ uses
 
 {$R *.dfm}
 
-procedure TformDataDiri.btnCetakLaporanClick(Sender: TObject);
-begin
-formReport.frxRptDataDiriSiswa.ShowReport();
-end;
-
 procedure TformDataDiri.FormActivate(Sender: TObject);
  var
- query, userid : string;
+ query : string;
 begin
   userid := formUserLogin.lblGetID.Caption;
   txtGetID.Text := userid;
@@ -74,5 +70,20 @@ begin
   userid := formUserLogin.lblGetID.Caption;
   txtGetID.Text := userid;
 end;
+
+procedure TformDataDiri.btnCetakLaporanClick(Sender: TObject);
+begin
+  userid := formUserLogin.lblGetID.Caption;
+  txtGetID.Text := userid;
+
+  formConnection.ZqSiswa.SQL.Clear;
+  formConnection.ZqSiswa.SQL.Add('SELECT * FROM siswa WHERE user_id = :userid');
+  formConnection.ZqSiswa.ParamByName('userid').AsString := userid;
+  formConnection.ZqSiswa.Open;
+  formConnection.ZqSiswa.ExecSQL;
+
+  formReport.frxRptDataDiriSiswa.ShowReport();
+end;
+
 
 end.

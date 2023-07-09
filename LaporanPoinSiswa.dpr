@@ -19,8 +19,8 @@ uses
 
 begin
   Application.Initialize;
-  Application.CreateForm(TformHubungan, formHubungan);
   Application.CreateForm(TformUserLogin, formUserLogin);
+  Application.CreateForm(TformHubungan, formHubungan);
   Application.CreateForm(TformConnection, formConnection);
   Application.CreateForm(TformAdmin, formAdmin);
   Application.CreateForm(TformUserAdmin, formUserAdmin);
