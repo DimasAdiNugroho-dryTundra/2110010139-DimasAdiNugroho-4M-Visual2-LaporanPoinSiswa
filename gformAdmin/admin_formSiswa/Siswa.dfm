@@ -55,7 +55,7 @@ object formSiswa: TformSiswa
     TabOrder = 2
   end
   object buttonTambah: TButton
-    Left = 960
+    Left = 936
     Top = 112
     Width = 105
     Height = 41
@@ -69,8 +69,8 @@ object formSiswa: TformSiswa
     TabOrder = 3
   end
   object buttonLaporan: TButton
-    Left = 952
-    Top = 176
+    Left = 936
+    Top = 168
     Width = 105
     Height = 41
     Caption = 'LAPORAN'

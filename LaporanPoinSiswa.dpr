@@ -19,6 +19,7 @@ uses
 
 begin
   Application.Initialize;
+  Application.CreateForm(TformHubungan, formHubungan);
   Application.CreateForm(TformUserLogin, formUserLogin);
   Application.CreateForm(TformConnection, formConnection);
   Application.CreateForm(TformAdmin, formAdmin);
@@ -29,7 +30,6 @@ begin
   Application.CreateForm(TformReport, formReport);
   Application.CreateForm(TformSiswa, formSiswa);
   Application.CreateForm(TformOrangTua, formOrangTua);
-  Application.CreateForm(TformHubungan, formHubungan);
   Application.CreateForm(TformDataDiri, formDataDiri);
   Application.Run;
 end.

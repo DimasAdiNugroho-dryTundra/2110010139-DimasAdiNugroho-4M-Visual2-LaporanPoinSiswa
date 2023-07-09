@@ -25,6 +25,7 @@ object formHubungan: TformHubungan
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = DBGrid1CellClick
   end
   object GrupBox1: TGroupBox
     Left = 56
@@ -117,9 +118,9 @@ object formHubungan: TformHubungan
       ParentFont = False
       TabOrder = 1
     end
-    object txtStatus: TEdit
+    object txtKeterangan: TEdit
       Left = 152
-      Top = 112
+      Top = 152
       Width = 185
       Height = 27
       Font.Charset = DEFAULT_CHARSET
@@ -130,9 +131,9 @@ object formHubungan: TformHubungan
       ParentFont = False
       TabOrder = 2
     end
-    object txtKeterangan: TEdit
+    object txtStatus: TEdit
       Left = 152
-      Top = 152
+      Top = 112
       Width = 185
       Height = 27
       Font.Charset = DEFAULT_CHARSET
@@ -157,7 +158,7 @@ object formHubungan: TformHubungan
     Font.Style = []
     ParentFont = False
     TabOrder = 2
-    object DBGrid2: TDBGrid
+    object dgDataSiswa: TDBGrid
       Left = 8
       Top = 40
       Width = 273
@@ -184,7 +185,7 @@ object formHubungan: TformHubungan
     Font.Style = []
     ParentFont = False
     TabOrder = 3
-    object DBGrid3: TDBGrid
+    object dgDataOrtu: TDBGrid
       Left = 8
       Top = 40
       Width = 273
@@ -211,6 +212,7 @@ object formHubungan: TformHubungan
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 4
+    OnClick = buttonEditClick
   end
   object buttonHapus: TButton
     Left = 464
@@ -225,6 +227,7 @@ object formHubungan: TformHubungan
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 5
+    OnClick = buttonHapusClick
   end
   object buttonTambah: TButton
     Left = 464
@@ -239,6 +242,7 @@ object formHubungan: TformHubungan
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 6
+    OnClick = buttonTambahClick
   end
   object buttonLaporan: TButton
     Left = 464

@@ -2,7 +2,7 @@ object formOrangTua: TformOrangTua
   Left = 192
   Top = 125
   Width = 1044
-  Height = 524
+  Height = 529
   Caption = 'Orang Tua'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -25,6 +25,7 @@ object formOrangTua: TformOrangTua
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = DBGrid1CellClick
   end
   object GroupBox1: TGroupBox
     Left = 40
@@ -213,6 +214,12 @@ object formOrangTua: TformOrangTua
       Top = 232
       Width = 193
       Height = 73
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 5
     end
     object cmbJK: TComboBox
@@ -220,7 +227,13 @@ object formOrangTua: TformOrangTua
       Top = 360
       Width = 193
       Height = 27
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
       ItemHeight = 19
+      ParentFont = False
       TabOrder = 6
       Items.Strings = (
         'Laki-laki'
