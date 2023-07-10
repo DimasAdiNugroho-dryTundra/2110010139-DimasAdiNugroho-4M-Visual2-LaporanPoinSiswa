@@ -31,7 +31,8 @@ uses
   Connection,
   DB,
   Admin,
-  DataDiri;
+  DataDiri,
+  Guru;
 
 {$R *.dfm}
 
@@ -67,7 +68,10 @@ begin
             end
           else if (loginLevel = 'guru') then
             begin
+              userid := formConnection.zqUserLogin.FieldValues['id'];
+              lblGetID.Caption := userid;
               ShowMessage('Anda Login Sebagai Guru');
+              formGuru.ShowModal;
             end
           else
             begin

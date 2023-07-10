@@ -30,6 +30,8 @@ type
     buttonLaporan: TButton;
     txtStatus: TEdit;
     mmAlamat: TMemo;
+    Label9: TLabel;
+    txtIDUser: TEdit;
     procedure dgWaliKelasCellClick(Column: TColumn);
     procedure buttonEditClick(Sender: TObject);
     procedure buttonTambahClick(Sender: TObject);
@@ -58,9 +60,9 @@ indexJK : Integer;
 begin
 id := formConnection.zqWaliKelas.Fields[0].AsString;
 
+txtIDUser.Text := formConnection.zqWaliKelas.Fields[1].AsString;
 txtNIKNIP.Text := formConnection.zqWaliKelas.Fields[2].AsString;
 txtNama.Text := formConnection.zqWaliKelas.Fields[3].AsString;
-
 mmAlamat.Text := formConnection.zqWaliKelas.Fields[5].AsString;
 txtTelp.Text := formConnection.zqWaliKelas.Fields[6].AsString;
 txtMatPel.Text := formConnection.zqWaliKelas.Fields[7].AsString;
@@ -91,7 +93,7 @@ else
   ShowMessage('error');
 
 formConnection.zqWaliKelas.SQL.Clear;
-formConnection.zqWaliKelas.SQL.Add('UPDATE wali_kelas SET nik="'+txtNIKNIP.Text+'", nama="'+txtNama.Text+'", jk="'+IntToStr(jkQ)+'", alamat="'+mmAlamat.Text+'", telp="'+txtTelp.Text+'", matpel="'+txtMatPel.Text+'", pendidikan="'+txtPendidikan.Text+'", status="'+txtStatus.Text+'" WHERE id="'+id+'"');
+formConnection.zqWaliKelas.SQL.Add('UPDATE wali_kelas SET user_id="'+txtIDUser.Text+'", nik/nip="'+txtNIKNIP.Text+'", nama="'+txtNama.Text+'", jk="'+IntToStr(jkQ)+'", alamat="'+mmAlamat.Text+'", telp="'+txtTelp.Text+'", matpel="'+txtMatPel.Text+'", pendidikan="'+txtPendidikan.Text+'", status="'+txtStatus.Text+'" WHERE id="'+id+'"');
 formConnection.zqWaliKelas.ExecSQL;
 
 formConnection.zqWaliKelas.SQL.Clear;
@@ -117,7 +119,7 @@ else
   ShowMessage('error');
 
 formConnection.zqWaliKelas.SQL.Clear;
-formConnection.zqWaliKelas.SQL.Add('INSERT INTO wali-kelas VALUES(null, null, "'+txtNIKNIP.Text+'", "'+txtNama.Text+'", "'+IntToStr(jkQ)+'", "'+mmAlamat.Text+'", "'+txtTelp.Text+'", "'+txtPendidikan.Text+'", "'+txtMatPel.Text+'", "'+txtStatus.Text+'")');
+formConnection.zqWaliKelas.SQL.Add('INSERT INTO wali_kelas VALUES(null, "'+txtIDUser.Text+'", "'+txtNIKNIP.Text+'", "'+txtNama.Text+'", "'+IntToStr(jkQ)+'", "'+mmAlamat.Text+'", "'+txtTelp.Text+'", "'+txtPendidikan.Text+'", "'+txtMatPel.Text+'", "'+txtStatus.Text+'")');
 formConnection.zqWaliKelas.ExecSQL;
 
 formConnection.zqWaliKelas.SQL.Clear;

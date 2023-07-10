@@ -13,7 +13,8 @@ uses
   Siswa in 'gformAdmin\admin_formSiswa\Siswa.pas' {formSiswa},
   OrangTua in 'gformAdmin\admin_formOrangTua\OrangTua.pas' {formOrangTua},
   Hubungan in 'gformAdmin\admin_formHubungan\Hubungan.pas' {formHubungan},
-  DataDiri in 'gformSiswa\siswa_formDataDiri\DataDiri.pas' {formDataDiri};
+  DataDiri in 'gformSiswa\siswa_formDataDiri\DataDiri.pas' {formDataDiri},
+  Guru in 'gformGuru\guru_formGuru\Guru.pas' {formGuru};
 
 {$R *.res}
 
@@ -31,5 +32,6 @@ begin
   Application.CreateForm(TformSiswa, formSiswa);
   Application.CreateForm(TformOrangTua, formOrangTua);
   Application.CreateForm(TformDataDiri, formDataDiri);
+  Application.CreateForm(TformGuru, formGuru);
   Application.Run;
 end.

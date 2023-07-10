@@ -130,6 +130,19 @@ object formWaliKelas: TformWaliKelas
       Font.Style = [fsBold]
       ParentFont = False
     end
+    object Label9: TLabel
+      Left = 408
+      Top = 206
+      Width = 61
+      Height = 19
+      Caption = 'ID User'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
     object txtNIKNIP: TEdit
       Left = 152
       Top = 32
@@ -237,6 +250,19 @@ object formWaliKelas: TformWaliKelas
       Font.Style = []
       ParentFont = False
       TabOrder = 7
+    end
+    object txtIDUser: TEdit
+      Left = 544
+      Top = 200
+      Width = 225
+      Height = 27
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 8
     end
   end
   object dgWaliKelas: TDBGrid
