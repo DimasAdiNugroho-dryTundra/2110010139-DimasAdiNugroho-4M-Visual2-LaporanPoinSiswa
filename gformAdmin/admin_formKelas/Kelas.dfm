@@ -14,9 +14,9 @@ object formKelas: TformKelas
   PixelsPerInch = 96
   TextHeight = 13
   object dbgrdKelas: TDBGrid
-    Left = 72
-    Top = 280
-    Width = 465
+    Left = 56
+    Top = 264
+    Width = 361
     Height = 177
     DataSource = formConnection.dsKelasAdmin
     TabOrder = 0
@@ -163,5 +163,20 @@ object formKelas: TformKelas
     ParentFont = False
     TabOrder = 4
     OnClick = buttonTambahClick
+  end
+  object buttonLaporan: TButton
+    Left = 448
+    Top = 240
+    Width = 105
+    Height = 41
+    Caption = 'LAPORAN'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+    OnClick = buttonLaporanClick
   end
 end

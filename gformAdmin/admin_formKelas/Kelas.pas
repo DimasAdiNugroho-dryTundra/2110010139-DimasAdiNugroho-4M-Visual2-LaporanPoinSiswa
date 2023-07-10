@@ -19,10 +19,12 @@ type
     buttonHapus: TButton;
     buttonTambah: TButton;
     txtJurusan: TEdit;
+    buttonLaporan: TButton;
     procedure buttonEditClick(Sender: TObject);
     procedure buttonTambahClick(Sender: TObject);
     procedure buttonHapusClick(Sender: TObject);
     procedure dbgrdKelasCellClick(Column: TColumn);
+    procedure buttonLaporanClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -37,7 +39,8 @@ var
 implementation
 
 uses
-  Connection;
+  Connection,
+  Report;
 
 {$R *.dfm}
 
@@ -85,9 +88,15 @@ end;
 procedure TformKelas.dbgrdKelasCellClick(Column: TColumn);
 begin
 id := formConnection.zqKelasAdmin.Fields[0].AsString;
+
 txtNamaKelas.Text := formConnection.zqKelasAdmin.Fields[1].AsString;
 txtJenis.Text := formConnection.zqKelasAdmin.Fields[2].AsString;
 txtJurusan.Text := formConnection.zqKelasAdmin.Fields[3].AsString;
+end;
+
+procedure TformKelas.buttonLaporanClick(Sender: TObject);
+begin
+formReport.frxRptKelas.ShowReport();
 end;
 
 end.

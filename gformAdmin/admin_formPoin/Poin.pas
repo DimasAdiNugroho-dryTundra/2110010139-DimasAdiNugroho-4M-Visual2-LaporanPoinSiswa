@@ -21,6 +21,7 @@ type
     buttonHapus: TButton;
     GroupBox1: TGroupBox;
     DBGrid1: TDBGrid;
+    buttonLaporan: TButton;
     procedure DBGrid1CellClick(Column: TColumn);
     procedure buttonEditClick(Sender: TObject);
     procedure buttonTambahClick(Sender: TObject);

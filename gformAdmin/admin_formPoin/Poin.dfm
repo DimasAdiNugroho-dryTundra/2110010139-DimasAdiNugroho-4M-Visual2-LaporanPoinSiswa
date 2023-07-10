@@ -138,7 +138,7 @@ object formPoin: TformPoin
     Top = 40
     Width = 113
     Height = 41
-    Caption = 'Edit'
+    Caption = 'EDIT'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -153,7 +153,7 @@ object formPoin: TformPoin
     Top = 96
     Width = 113
     Height = 41
-    Caption = 'Tambah'
+    Caption = 'TAMBAH'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -168,7 +168,7 @@ object formPoin: TformPoin
     Top = 152
     Width = 113
     Height = 41
-    Caption = 'Hapus'
+    Caption = 'HAPUS'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -191,5 +191,20 @@ object formPoin: TformPoin
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
     OnCellClick = DBGrid1CellClick
+  end
+  object buttonLaporan: TButton
+    Left = 472
+    Top = 208
+    Width = 113
+    Height = 41
+    Caption = 'LAPORAN'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+    OnClick = buttonHapusClick
   end
 end

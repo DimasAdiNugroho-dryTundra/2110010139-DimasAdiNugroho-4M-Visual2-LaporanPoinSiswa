@@ -1,8 +1,8 @@
 object formSiswa: TformSiswa
-  Left = 235
-  Top = 159
-  Width = 1236
-  Height = 612
+  Left = 238
+  Top = 134
+  Width = 1094
+  Height = 636
   Caption = 'Siswa'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,9 +13,9 @@ object formSiswa: TformSiswa
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object DBGrid1: TDBGrid
+  object dgSiswa: TDBGrid
     Left = 32
-    Top = 400
+    Top = 408
     Width = 873
     Height = 145
     DataSource = formConnection.dsSiswa
@@ -25,6 +25,7 @@ object formSiswa: TformSiswa
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dgSiswaCellClick
   end
   object buttonEdit: TButton
     Left = 936
@@ -39,10 +40,11 @@ object formSiswa: TformSiswa
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
+    OnClick = buttonEditClick
   end
   object buttonHapus: TButton
     Left = 936
-    Top = 224
+    Top = 168
     Width = 105
     Height = 41
     Caption = 'HAPUS'
@@ -53,6 +55,7 @@ object formSiswa: TformSiswa
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
+    OnClick = buttonHapusClick
   end
   object buttonTambah: TButton
     Left = 936
@@ -67,20 +70,7 @@ object formSiswa: TformSiswa
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 3
-  end
-  object buttonLaporan: TButton
-    Left = 936
-    Top = 168
-    Width = 105
-    Height = 41
-    Caption = 'LAPORAN'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 4
+    OnClick = buttonTambahClick
   end
   object GroupBox1: TGroupBox
     Left = 32
@@ -94,7 +84,7 @@ object formSiswa: TformSiswa
     Font.Name = 'Tahoma'
     Font.Style = [fsBold, fsItalic]
     ParentFont = False
-    TabOrder = 5
+    TabOrder = 4
     object Label4: TLabel
       Left = 16
       Top = 160
@@ -163,9 +153,9 @@ object formSiswa: TformSiswa
     object Label6: TLabel
       Left = 408
       Top = 80
-      Width = 125
+      Width = 63
       Height = 19
-      Caption = 'Mata Pelajaran'
+      Caption = 'Jurusan'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -176,9 +166,9 @@ object formSiswa: TformSiswa
     object Label7: TLabel
       Left = 408
       Top = 120
-      Width = 91
+      Width = 85
       Height = 19
-      Caption = 'Pendidikan'
+      Caption = 'Wali Kelas'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -189,9 +179,9 @@ object formSiswa: TformSiswa
     object Label8: TLabel
       Left = 408
       Top = 158
-      Width = 52
+      Width = 59
       Height = 19
-      Caption = 'Status'
+      Caption = 'Alamat'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -251,7 +241,46 @@ object formSiswa: TformSiswa
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object txtNIKNIP: TEdit
+    object Label13: TLabel
+      Left = 408
+      Top = 248
+      Width = 66
+      Height = 19
+      Caption = 'Telepon'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label14: TLabel
+      Left = 408
+      Top = 288
+      Width = 23
+      Height = 19
+      Caption = 'HP'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label15: TLabel
+      Left = 408
+      Top = 320
+      Width = 52
+      Height = 19
+      Caption = 'Status'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object txtIDUser: TEdit
       Left = 152
       Top = 32
       Width = 225
@@ -264,7 +293,7 @@ object formSiswa: TformSiswa
       ParentFont = False
       TabOrder = 0
     end
-    object txtNama: TEdit
+    object txtNIS: TEdit
       Left = 152
       Top = 72
       Width = 225
@@ -277,7 +306,7 @@ object formSiswa: TformSiswa
       ParentFont = False
       TabOrder = 1
     end
-    object Edit1: TEdit
+    object txtNISN: TEdit
       Left = 152
       Top = 112
       Width = 225
@@ -290,7 +319,7 @@ object formSiswa: TformSiswa
       ParentFont = False
       TabOrder = 2
     end
-    object Edit2: TEdit
+    object txtNama: TEdit
       Left = 152
       Top = 152
       Width = 225
@@ -303,7 +332,7 @@ object formSiswa: TformSiswa
       ParentFont = False
       TabOrder = 3
     end
-    object Edit3: TEdit
+    object txtNIK: TEdit
       Left = 152
       Top = 192
       Width = 225
@@ -316,7 +345,7 @@ object formSiswa: TformSiswa
       ParentFont = False
       TabOrder = 4
     end
-    object Edit4: TEdit
+    object txtTmpLahir: TEdit
       Left = 152
       Top = 232
       Width = 225
@@ -329,7 +358,7 @@ object formSiswa: TformSiswa
       ParentFont = False
       TabOrder = 5
     end
-    object DateTimePicker1: TDateTimePicker
+    object dtpTglLahir: TDateTimePicker
       Left = 152
       Top = 272
       Width = 225
@@ -344,7 +373,7 @@ object formSiswa: TformSiswa
       ParentFont = False
       TabOrder = 6
     end
-    object ComboBox1: TComboBox
+    object cmbJK: TComboBox
       Left = 152
       Top = 312
       Width = 225
@@ -361,7 +390,7 @@ object formSiswa: TformSiswa
         'Laki-laki'
         'Perempuan')
     end
-    object Edit5: TEdit
+    object txtTktKelas: TEdit
       Left = 544
       Top = 32
       Width = 225
@@ -374,7 +403,7 @@ object formSiswa: TformSiswa
       ParentFont = False
       TabOrder = 8
     end
-    object Edit6: TEdit
+    object txtJurusan: TEdit
       Left = 544
       Top = 72
       Width = 225
@@ -387,7 +416,7 @@ object formSiswa: TformSiswa
       ParentFont = False
       TabOrder = 9
     end
-    object Edit7: TEdit
+    object txtWakel: TEdit
       Left = 544
       Top = 112
       Width = 225
@@ -400,9 +429,22 @@ object formSiswa: TformSiswa
       ParentFont = False
       TabOrder = 10
     end
-    object Edit8: TEdit
+    object mmAlamat: TMemo
       Left = 544
       Top = 152
+      Width = 225
+      Height = 73
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 11
+    end
+    object txtTelp: TEdit
+      Left = 544
+      Top = 240
       Width = 225
       Height = 27
       Font.Charset = DEFAULT_CHARSET
@@ -411,7 +453,33 @@ object formSiswa: TformSiswa
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
-      TabOrder = 11
+      TabOrder = 12
+    end
+    object txtHP: TEdit
+      Left = 544
+      Top = 280
+      Width = 225
+      Height = 27
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 13
+    end
+    object txtStatus: TEdit
+      Left = 544
+      Top = 320
+      Width = 225
+      Height = 27
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 14
     end
   end
 end
