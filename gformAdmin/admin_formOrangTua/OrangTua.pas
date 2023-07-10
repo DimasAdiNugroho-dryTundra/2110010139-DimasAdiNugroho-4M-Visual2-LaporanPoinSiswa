@@ -30,11 +30,14 @@ type
     buttonLaporan: TButton;
     txtAgama: TEdit;
     Label8: TLabel;
+    Label9: TLabel;
+    cmbStatus: TComboBox;
     procedure DBGrid1CellClick(Column: TColumn);
     procedure buttonEditClick(Sender: TObject);
     procedure buttonHapusClick(Sender: TObject);
     procedure buttonTambahClick(Sender: TObject);
     procedure buttonLaporanClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -75,6 +78,8 @@ else if (jk = '0') then
 else
   indexJK := -1;
 cmbJK.ItemIndex := indexJK;
+
+cmbStatus.Text := formConnection.zqOrangTua.Fields[9].AsString;
 end;
 
 procedure TformOrangTua.buttonEditClick(Sender: TObject);
@@ -91,7 +96,7 @@ else
   ShowMessage('error');
 
 formConnection.zqOrangTua.SQL.Clear;
-formConnection.zqOrangTua.SQL.Add('UPDATE ortu SET nik="'+txtNIK.Text+'", nama="'+txtNama.Text+'", pendidikan="'+txtPendidikan.Text+'", pekerjaan="'+txtPekerjaan.Text+'", telp="'+txtTelp.Text+'", alamat="'+txtAlamat.Text+'", agama="'+txtAgama.Text+'", jk="'+IntToStr(jkQ)+'" WHERE id="'+id+'"');
+formConnection.zqOrangTua.SQL.Add('UPDATE ortu SET nik="'+txtNIK.Text+'", nama="'+txtNama.Text+'", pendidikan="'+txtPendidikan.Text+'", pekerjaan="'+txtPekerjaan.Text+'", telp="'+txtTelp.Text+'", alamat="'+txtAlamat.Text+'", agama="'+txtAgama.Text+'", jk="'+IntToStr(jkQ)+'", status="'+cmbStatus.Text+'" WHERE id="'+id+'"');
 formConnection.zqOrangTua.ExecSQL;
 
 formConnection.zqOrangTua.SQL.Clear;
@@ -129,7 +134,7 @@ else
   ShowMessage('error');
 
 formConnection.zqOrangTua.SQL.Clear;
-formConnection.zqOrangTua.SQL.Add('INSERT INTO ortu VALUES(null, "'+txtNIK.Text+'", "'+txtNama.Text+'", "'+txtPendidikan.Text+'", "'+txtPekerjaan.Text+'", "'+txtTelp.Text+'", "'+txtAlamat.Text+'", "'+txtAgama.Text+'", "'+IntToStr(jkQ)+'")');
+formConnection.zqOrangTua.SQL.Add('INSERT INTO ortu VALUES(null, "'+txtNIK.Text+'", "'+txtNama.Text+'", "'+txtPendidikan.Text+'", "'+txtPekerjaan.Text+'", "'+txtTelp.Text+'", "'+txtAlamat.Text+'", "'+txtAgama.Text+'", "'+IntToStr(jkQ)+'", "'+cmbStatus.Text+'")');
 formConnection.zqOrangTua.ExecSQL;
 
 formConnection.zqOrangTua.SQL.Clear;
@@ -142,6 +147,11 @@ end;
 procedure TformOrangTua.buttonLaporanClick(Sender: TObject);
 begin
 formReport.frxRptOrangTua.ShowReport();
+end;
+
+procedure TformOrangTua.FormCreate(Sender: TObject);
+begin
+Position := poScreenCenter;
 end;
 
 end.

@@ -38,6 +38,7 @@ type
     GroupBox1: TGroupBox;
     dsDataDiriSiswa: TDataSource;
     zqDataDiriSiswa: TZQuery;
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -50,5 +51,10 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TformConnection.FormCreate(Sender: TObject);
+begin
+Position := poScreenCenter;
+end;
 
 end.

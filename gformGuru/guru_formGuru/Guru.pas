@@ -29,6 +29,7 @@ uses
 procedure TformGuru.FormCreate(Sender: TObject);
 var userid : string;
 begin
+  Position := poScreenCenter;
   userid := formUserLogin.lblGetID.Caption;
   txtGetID.Text := userid;
 end;

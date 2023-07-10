@@ -2,7 +2,7 @@ object formOrangTua: TformOrangTua
   Left = 192
   Top = 124
   Width = 1044
-  Height = 530
+  Height = 606
   Caption = 'Orang Tua'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,6 +11,7 @@ object formOrangTua: TformOrangTua
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object DBGrid1: TDBGrid
@@ -31,7 +32,7 @@ object formOrangTua: TformOrangTua
     Left = 40
     Top = 40
     Width = 409
-    Height = 409
+    Height = 473
     Caption = 'Orang Tua'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -120,7 +121,7 @@ object formOrangTua: TformOrangTua
     end
     object Label7: TLabel
       Left = 24
-      Top = 360
+      Top = 368
       Width = 112
       Height = 19
       Caption = 'Jenis Kelamin'
@@ -137,6 +138,19 @@ object formOrangTua: TformOrangTua
       Width = 57
       Height = 19
       Caption = 'Agama'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label9: TLabel
+      Left = 24
+      Top = 408
+      Width = 52
+      Height = 19
+      Caption = 'Status'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -251,6 +265,24 @@ object formOrangTua: TformOrangTua
       Font.Style = []
       ParentFont = False
       TabOrder = 7
+    end
+    object cmbStatus: TComboBox
+      Left = 168
+      Top = 400
+      Width = 193
+      Height = 27
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ItemHeight = 19
+      ParentFont = False
+      TabOrder = 8
+      Items.Strings = (
+        'Hidup'
+        'Meninggal'
+        'Wali')
     end
   end
   object buttonEdit: TButton

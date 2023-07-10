@@ -16,6 +16,7 @@ type
     DBGrid1: TDBGrid;
     lblGetID: TLabel;
     procedure buttonLoginClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -86,6 +87,11 @@ begin
           ShowMessage('Login Gagal');
         end;
     end;
+end;
+
+procedure TformUserLogin.FormCreate(Sender: TObject);
+begin
+Position := poScreenCenter;
 end;
 
 end.

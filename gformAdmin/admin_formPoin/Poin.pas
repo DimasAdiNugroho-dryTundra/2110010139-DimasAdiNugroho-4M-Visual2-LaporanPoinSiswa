@@ -27,6 +27,7 @@ type
     procedure buttonTambahClick(Sender: TObject);
     procedure buttonHapusClick(Sender: TObject);
     procedure buttonLaporanClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -46,19 +47,41 @@ uses
 {$R *.dfm}
 
 procedure TformPoin.DBGrid1CellClick(Column: TColumn);
+var
+poin : String;
+index : Integer;
 begin
 id := formConnection.zqPoinAdmin.Fields[0].AsString;
 
 mmNamaPoin.Text := formConnection.zqPoinAdmin.Fields[1].AsString;
 txtBobotPoin.Text := formConnection.zqPoinAdmin.Fields[2].AsString;
 cmbJenisPoin.Text := formConnection.zqPoinAdmin.Fields[3].AsString;
-cmbStatusPoin.Text := formConnection.zqPoinAdmin.Fields[4].AsString;
+
+poin := formConnection.zqWaliKelas.Fields[4].AsString;
+if (poin = '1') then
+  index := 1
+else if (poin = '0') then
+  index := 0
+else
+  index := -1;
+cmbStatusPoin.ItemIndex := index;
 end;
 
 procedure TformPoin.buttonEditClick(Sender: TObject);
+var
+  poinSelect : string;
+  indexPoin : Integer;
 begin
+poinSelect := cmbStatusPoin.Text;
+if (poinSelect = '1') then
+  indexPoin := 1
+else if (poinSelect = '0') then
+  indexPoin := 0
+else
+  ShowMessage('error');
+
 formConnection.zqPoinAdmin.SQL.Clear;
-formConnection.zqPoinAdmin.SQL.Add('UPDATE poin SET nama="'+mmNamaPoin.Text+'", bobot="'+txtBobotPoin.Text+'", jenis="'+cmbJenisPoin.Text+'", status="'+cmbStatusPoin.Text+'" WHERE id="'+id+'"');
+formConnection.zqPoinAdmin.SQL.Add('UPDATE poin SET nama="'+mmNamaPoin.Text+'", bobot="'+txtBobotPoin.Text+'", jenis="'+cmbJenisPoin.Text+'", status="'+IntToStr(indexPoin)+'" WHERE id="'+id+'"');
 formConnection.zqPoinAdmin.ExecSQL;
 
 formConnection.zqPoinAdmin.SQL.Clear;
@@ -70,9 +93,19 @@ ShowMessage('DATA BERHASIL DIUBAH ...');
 end;
 
 procedure TformPoin.buttonTambahClick(Sender: TObject);
+var
+  poinSelect : string;
+  indexPoin : Integer;
 begin
+poinSelect := cmbStatusPoin.Text;
+if (poinSelect = '1') then
+  indexPoin := 1
+else if (poinSelect = '0') then
+  indexPoin := 0
+else
+  ShowMessage('error');
 formConnection.zqPoinAdmin.SQL.Clear;
-formConnection.zqPoinAdmin.SQL.Add('INSERT INTO poin VALUES(null, "'+mmNamaPoin.Text+'", "'+txtBobotPoin.Text+'", "'+cmbJenisPoin.Text+'", "'+cmbStatusPoin.Text+'")');
+formConnection.zqPoinAdmin.SQL.Add('INSERT INTO poin VALUES(null, "'+mmNamaPoin.Text+'", "'+txtBobotPoin.Text+'", "'+cmbJenisPoin.Text+'", "'+IntToStr(indexPoin)+'")');
 formConnection.zqPoinAdmin.ExecSQL;
 
 formConnection.zqPoinAdmin.SQL.Clear;
@@ -98,6 +131,11 @@ end;
 procedure TformPoin.buttonLaporanClick(Sender: TObject);
 begin
 formReport.frxRptPoin.ShowReport();
+end;
+
+procedure TformPoin.FormCreate(Sender: TObject);
+begin
+Position := poScreenCenter;
 end;
 
 end.

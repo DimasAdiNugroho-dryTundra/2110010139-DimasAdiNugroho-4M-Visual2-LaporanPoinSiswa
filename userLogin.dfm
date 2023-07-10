@@ -11,6 +11,7 @@ object formUserLogin: TformUserLogin
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Label2: TLabel
@@ -44,7 +45,6 @@ object formUserLogin: TformUserLogin
     Top = 64
     Width = 3
     Height = 13
-    Visible = False
   end
   object editUsername: TEdit
     Left = 136

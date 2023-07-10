@@ -21,6 +21,7 @@ uses
 begin
   Application.Initialize;
   Application.CreateForm(TformUserLogin, formUserLogin);
+  Application.CreateForm(TformOrangTua, formOrangTua);
   Application.CreateForm(TformHubungan, formHubungan);
   Application.CreateForm(TformConnection, formConnection);
   Application.CreateForm(TformAdmin, formAdmin);
@@ -30,7 +31,6 @@ begin
   Application.CreateForm(TformWaliKelas, formWaliKelas);
   Application.CreateForm(TformReport, formReport);
   Application.CreateForm(TformSiswa, formSiswa);
-  Application.CreateForm(TformOrangTua, formOrangTua);
   Application.CreateForm(TformDataDiri, formDataDiri);
   Application.CreateForm(TformGuru, formGuru);
   Application.Run;

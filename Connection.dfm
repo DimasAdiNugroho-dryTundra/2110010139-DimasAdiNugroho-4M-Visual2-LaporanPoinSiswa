@@ -11,6 +11,7 @@ object formConnection: TformConnection
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object grbUserLogin: TGroupBox
@@ -198,6 +199,7 @@ object formConnection: TformConnection
   end
   object zqOrangTua: TZQuery
     Connection = Zconn
+    Active = True
     SQL.Strings = (
       'SELECT * FROM ortu')
     Params = <>

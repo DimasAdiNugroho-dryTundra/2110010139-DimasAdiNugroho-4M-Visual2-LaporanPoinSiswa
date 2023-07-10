@@ -26,6 +26,7 @@ type
     procedure buttonAdminToSiswaClick(Sender: TObject);
     procedure buttonAdminToOrangTuaClick(Sender: TObject);
     procedure buttonAdminToHubunganClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -82,6 +83,11 @@ end;
 procedure TformAdmin.buttonAdminToHubunganClick(Sender: TObject);
 begin
  formHubungan.ShowModal;
+end;
+
+procedure TformAdmin.FormCreate(Sender: TObject);
+begin
+Position := poScreenCenter;
 end;
 
 end.

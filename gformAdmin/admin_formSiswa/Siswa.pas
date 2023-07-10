@@ -49,6 +49,7 @@ type
     procedure buttonTambahClick(Sender: TObject);
     procedure buttonHapusClick(Sender: TObject);
     procedure buttonLaporanClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -67,6 +68,9 @@ uses
 {$R *.dfm}
 
 procedure TformSiswa.dgSiswaCellClick(Column: TColumn);
+var
+jk : String;
+indexJK : Integer;
 begin
 id := formConnection.zqSiswa.Fields[0].AsString;
 
@@ -77,7 +81,7 @@ txtNama.Text := formConnection.zqSiswa.Fields[4].AsString;
 txtNIK.Text := formConnection.zqSiswa.Fields[5].AsString;
 txtTmpLahir.Text := formConnection.zqSiswa.Fields[6].AsString;
 dtpTglLahir.Date := formConnection.zqSiswa.Fields[7].AsDateTime;
-cmbJK.Text := formConnection.zqSiswa.Fields[8].AsString;
+
 txtTktKelas.Text := formConnection.zqSiswa.Fields[9].AsString;
 txtJurusan.Text := formConnection.zqSiswa.Fields[10].AsString;
 txtWakel.Text := formConnection.zqSiswa.Fields[11].AsString;
@@ -85,16 +89,52 @@ mmAlamat.Text := formConnection.zqSiswa.Fields[12].AsString;
 txtTelp.Text := formConnection.zqSiswa.Fields[13].AsString;
 txtHP.Text := formConnection.zqSiswa.Fields[14].AsString;
 txtStatus.Text := formConnection.zqSiswa.Fields[15].AsString;
+
+jk := formConnection.zqSiswa.Fields[8].AsString;
+if (jk = '1') then
+  indexJK := 0
+else if (jk = '0') then
+  indexJK := 1
+else
+  indexJK := -1;
+cmbJK.ItemIndex := indexJK;
 end;
 
 procedure TformSiswa.buttonEditClick(Sender: TObject);
+var
+  jkSelect : string;
+  jkQ : Integer;
 begin
-//edit
+jkSelect := cmbJK.Text;
+if (jkSelect = '1') then
+  jkQ := 1
+else if (jkSelect = '0') then
+  jkQ := 0
+else
+  ShowMessage('error');
+formConnection.zqSiswa.SQL.Clear;
+formConnection.zqSiswa.SQL.Add('UPDATE siswa SET user_id="'+txtIDUser.Text+'", nis="'+txtNIS.Text+'", nisn="'+txtNISN.Text+'", nama_siswa="'+txtNama.Text+'", nik="'+txtNIK.Text+'", tempat_lahir="'+txtTmpLahir.Text+'", jenis_kelamin="'+IntToStr(jkQ)+'", tingkat_kelas="'+txtTktKelas.Text+'", jurusan="'+txtJurusan.Text+'", wali_kelas="'+txtWakel.Text+'", alamat="'+mmAlamat.Text+'", telp="'+txtTelp.Text+'", hp="'+txtHP.Text+'", status="'+txtStatus.Text+'" WHERE id="'+id+'"');
+formConnection.zqSiswa.ExecSQL;
+
+formConnection.zqSiswa.SQL.Clear;
+formConnection.zqSiswa.SQL.Add('SELECT * FROM kelas');
+formConnection.zqSiswa.Active;
+formConnection.zqSiswa.ExecSQL;
+
+ShowMessage('DATA BERHASIL DIUBAH ...');
 end;
 
 procedure TformSiswa.buttonTambahClick(Sender: TObject);
 begin
-//tambah
+formConnection.zqSiswa.SQL.Clear;
+formConnection.zqSiswa.SQL.Add('INSERT INTO siswa VALUES(null, "'+txtIDUser.Text+'", "'+txtNIS.Text+'", "'+txtNISN.Text+'", "'+txtNama.Text+'", "'+txtNIK.Text+'", "'+txtTmpLahir.Text+'", "'+cmbJK.Text+'", "'+txtTktKelas.Text+'", "'+txtJurusan.Text+'", "'+txtWakel.Text+'", "'+mmAlamat.Text+'", "'+txtTelp.Text+'", "'+txtHP.Text+'", "'+txtStatus.Text+'")');
+formConnection.zqSiswa.ExecSQL;
+
+formConnection.zqSiswa.SQL.Clear;
+formConnection.zqSiswa.SQL.Add('SELECT * FROM kelas');
+formConnection.zqSiswa.ExecSQL;
+
+ShowMessage('DATA BERHASIL DITAMBAH ...');
 end;
 
 procedure TformSiswa.buttonHapusClick(Sender: TObject);
@@ -114,6 +154,11 @@ end;
 procedure TformSiswa.buttonLaporanClick(Sender: TObject);
 begin
 formReport.frxRptSiswa.ShowReport();
+end;
+
+procedure TformSiswa.FormCreate(Sender: TObject);
+begin
+Position := poScreenCenter;
 end;
 
 end.

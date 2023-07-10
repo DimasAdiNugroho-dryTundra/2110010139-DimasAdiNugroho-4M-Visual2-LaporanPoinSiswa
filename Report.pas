@@ -33,6 +33,7 @@ type
     frxRptSiswa: TfrxReport;
     frxRptWaliKelas: TfrxReport;
     frxRptOrangTua: TfrxReport;
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,5 +49,10 @@ uses
   Connection;
 
 {$R *.dfm}
+
+procedure TformReport.FormCreate(Sender: TObject);
+begin
+Position := poScreenCenter;
+end;
 
 end.

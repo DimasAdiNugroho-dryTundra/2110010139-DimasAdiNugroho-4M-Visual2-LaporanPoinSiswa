@@ -25,6 +25,7 @@ type
     procedure buttonHapusClick(Sender: TObject);
     procedure dbgrdKelasCellClick(Column: TColumn);
     procedure buttonLaporanClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -97,6 +98,11 @@ end;
 procedure TformKelas.buttonLaporanClick(Sender: TObject);
 begin
 formReport.frxRptKelas.ShowReport();
+end;
+
+procedure TformKelas.FormCreate(Sender: TObject);
+begin
+Position := poScreenCenter;
 end;
 
 end.

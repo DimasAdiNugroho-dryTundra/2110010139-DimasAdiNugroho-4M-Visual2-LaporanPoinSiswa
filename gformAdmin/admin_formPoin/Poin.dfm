@@ -11,6 +11,7 @@ object formPoin: TformPoin
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object GroupBox1: TGroupBox
@@ -117,6 +118,9 @@ object formPoin: TformPoin
       ItemHeight = 19
       ParentFont = False
       TabOrder = 2
+      Items.Strings = (
+        'Non Akitf'
+        'Akitf')
     end
     object cmbJenisPoin: TComboBox
       Left = 128

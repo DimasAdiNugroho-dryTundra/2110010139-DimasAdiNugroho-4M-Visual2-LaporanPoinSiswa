@@ -36,6 +36,7 @@ type
     procedure buttonEditClick(Sender: TObject);
     procedure buttonTambahClick(Sender: TObject);
     procedure buttonHapusClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -140,6 +141,11 @@ formConnection.zqWaliKelas.SQL.Add('SELECT * FROM wali_kelas');
 formConnection.zqWaliKelas.ExecSQL;
 
 ShowMessage('DATA BERHASIL DIHAPUS ...');
+end;
+
+procedure TformWaliKelas.FormCreate(Sender: TObject);
+begin
+Position := poScreenCenter;
 end;
 
 end.

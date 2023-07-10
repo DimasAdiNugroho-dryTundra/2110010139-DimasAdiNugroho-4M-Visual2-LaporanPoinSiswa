@@ -27,6 +27,7 @@ type
     procedure buttonHapusClick(Sender: TObject);
     procedure buttonTambahClick(Sender: TObject);
     procedure buttonLaporanClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,7 +42,7 @@ implementation
 
 uses
   Connection,
-  Report;
+  Report, DB;
 
 {$R *.dfm}
 
@@ -81,19 +82,19 @@ end;
 
 procedure TformUserAdmin.dgUserCellClick(Column: TColumn);
 var
-  level, status: String;
-  index1, index2: Integer;
+  status, levelName: String;
+  level, index1, index2: Integer;
 begin
 id := formConnection.zqUserAdmin.Fields[0].AsString;
 txtNama.Text := formConnection.zqUserAdmin.Fields[1].AsString;
 txtPassword.Text := formConnection.zqUserAdmin.Fields[2].AsString;
 
-level := formConnection.zqUserAdmin.Fields[3].AsString;
-if (level = 'admin') then
+level := formConnection.zqUserAdmin.Fields[3].AsInteger;
+if (levelName = 'admin') then
   index1 := 0
-else if (level = 'guru') then
+else if (levelName = 'guru') then
   index1 := 1
-else if (level = 'siswa') then
+else if (levelName = 'siswa') then
   index1 := 2
 else
   index1 := -1;
@@ -103,7 +104,7 @@ cmbLevel.ItemIndex := index1;
 status := formConnection.zqUserAdmin.Fields[4].AsString;
 if (status = '1') then
   index2 := 0
-else if (level = '0') then
+else if (levelName = '0') then
   index2 := 1
 else
   index2 := -1;
@@ -160,6 +161,11 @@ end;
 procedure TformUserAdmin.buttonLaporanClick(Sender: TObject);
 begin
 formReport.frxRptUserAdmin.ShowReport();
+end;
+
+procedure TformUserAdmin.FormCreate(Sender: TObject);
+begin
+Position := poScreenCenter;
 end;
 
 end.

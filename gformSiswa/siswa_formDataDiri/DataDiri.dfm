@@ -184,6 +184,5 @@ object formDataDiri: TformDataDiri
     Width = 121
     Height = 21
     TabOrder = 6
-    Visible = False
   end
 end

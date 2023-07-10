@@ -31,6 +31,7 @@ type
     procedure buttonTambahClick(Sender: TObject);
     procedure buttonHapusClick(Sender: TObject);
     procedure buttonLaporanClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -114,6 +115,11 @@ end;
 procedure TformHubungan.buttonLaporanClick(Sender: TObject);
 begin
 formReport.frxRptHubungan.ShowReport();
+end;
+
+procedure TformHubungan.FormCreate(Sender: TObject);
+begin
+Position := poScreenCenter;
 end;
 
 end.
