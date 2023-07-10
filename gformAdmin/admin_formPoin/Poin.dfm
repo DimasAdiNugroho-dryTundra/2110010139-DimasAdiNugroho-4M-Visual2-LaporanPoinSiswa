@@ -2,7 +2,7 @@ object formPoin: TformPoin
   Left = 464
   Top = 179
   Width = 649
-  Height = 540
+  Height = 612
   Caption = 'Poin'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -17,7 +17,7 @@ object formPoin: TformPoin
     Left = 40
     Top = 32
     Width = 409
-    Height = 233
+    Height = 281
     Caption = 'Poin'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -28,7 +28,7 @@ object formPoin: TformPoin
     TabOrder = 0
     object Label4: TLabel
       Left = 16
-      Top = 184
+      Top = 232
       Width = 93
       Height = 19
       Caption = 'Status Poin'
@@ -41,7 +41,7 @@ object formPoin: TformPoin
     end
     object Label3: TLabel
       Left = 16
-      Top = 144
+      Top = 192
       Width = 82
       Height = 19
       Caption = 'Jenis Poin'
@@ -54,7 +54,7 @@ object formPoin: TformPoin
     end
     object Label2: TLabel
       Left = 16
-      Top = 104
+      Top = 152
       Width = 89
       Height = 19
       Caption = 'Bobot Poin'
@@ -82,7 +82,7 @@ object formPoin: TformPoin
       Left = 128
       Top = 32
       Width = 249
-      Height = 49
+      Height = 97
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -93,7 +93,7 @@ object formPoin: TformPoin
     end
     object txtBobotPoin: TEdit
       Left = 128
-      Top = 96
+      Top = 144
       Width = 121
       Height = 27
       Font.Charset = DEFAULT_CHARSET
@@ -106,7 +106,7 @@ object formPoin: TformPoin
     end
     object cmbStatusPoin: TComboBox
       Left = 128
-      Top = 176
+      Top = 224
       Width = 121
       Height = 27
       Font.Charset = DEFAULT_CHARSET
@@ -120,7 +120,7 @@ object formPoin: TformPoin
     end
     object cmbJenisPoin: TComboBox
       Left = 128
-      Top = 136
+      Top = 184
       Width = 121
       Height = 27
       Font.Charset = DEFAULT_CHARSET
@@ -146,6 +146,7 @@ object formPoin: TformPoin
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
+    OnClick = buttonEditClick
   end
   object buttonTambah: TButton
     Left = 472
@@ -160,6 +161,7 @@ object formPoin: TformPoin
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
+    OnClick = buttonTambahClick
   end
   object buttonHapus: TButton
     Left = 472
@@ -174,10 +176,11 @@ object formPoin: TformPoin
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 3
+    OnClick = buttonHapusClick
   end
   object DBGrid1: TDBGrid
     Left = 40
-    Top = 288
+    Top = 336
     Width = 561
     Height = 185
     DataSource = formConnection.dsPoinAdmin
@@ -187,5 +190,6 @@ object formPoin: TformPoin
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = DBGrid1CellClick
   end
 end

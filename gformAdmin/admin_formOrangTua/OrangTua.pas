@@ -31,6 +31,9 @@ type
     txtAgama: TEdit;
     Label8: TLabel;
     procedure DBGrid1CellClick(Column: TColumn);
+    procedure buttonEditClick(Sender: TObject);
+    procedure buttonHapusClick(Sender: TObject);
+    procedure buttonTambahClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -71,6 +74,68 @@ else if (jk = '0') then
 else
   indexJK := -1;
 cmbJK.ItemIndex := indexJK;
+end;
+
+procedure TformOrangTua.buttonEditClick(Sender: TObject);
+var
+  jkSelect : string;
+  jkQ : Integer;
+begin
+jkSelect := cmbJK.Text;
+if (jkSelect = '1') then
+  jkQ := 1
+else if (jkSelect = '0') then
+  jkQ := 0
+else
+  ShowMessage('error');
+
+formConnection.zqOrangTua.SQL.Clear;
+formConnection.zqOrangTua.SQL.Add('UPDATE ortu SET nik="'+txtNIK.Text+'", nama="'+txtNama.Text+'", pendidikan="'+txtPendidikan.Text+'", pekerjaan="'+txtPekerjaan.Text+'", telp="'+txtTelp.Text+'", alamat="'+txtAlamat.Text+'", agama="'+txtAgama.Text+'", jk="'+IntToStr(jkQ)+'" WHERE id="'+id+'"');
+formConnection.zqOrangTua.ExecSQL;
+
+formConnection.zqOrangTua.SQL.Clear;
+formConnection.zqOrangTua.SQL.Add('SELECT * FROM ortu');
+formConnection.zqOrangTua.Active;
+formConnection.zqOrangTua.ExecSQL;
+
+ShowMessage('DATA BERHASIL DIUBAH ...');
+end;
+
+procedure TformOrangTua.buttonHapusClick(Sender: TObject);
+begin
+formConnection.zqOrangTua.SQL.Clear;
+formConnection.zqOrangTua.SQL.Add('DELETE FROM ortu WHERE id="'+id+'")');
+formConnection.zqOrangTua.ExecSQL;
+
+formConnection.zqOrangTua.SQL.Clear;
+formConnection.zqOrangTua.SQL.Add('SELECT * FROM ortu');
+formConnection.zqOrangTua.ExecSQL;
+
+ShowMessage('DATA BERHASIL DIHAPUS ...');
+end;
+
+procedure TformOrangTua.buttonTambahClick(Sender: TObject);
+var
+  jkSelect : string;
+  jkQ : Integer;
+begin
+jkSelect := cmbJK.Text;
+if (jkSelect = '1') then
+  jkQ := 1
+else if (jkSelect = '0') then
+  jkQ := 0
+else
+  ShowMessage('error');
+
+formConnection.zqOrangTua.SQL.Clear;
+formConnection.zqOrangTua.SQL.Add('INSERT INTO ortu VALUES(null, "'+txtNIK.Text+'", "'+txtNama.Text+'", "'+txtPendidikan.Text+'", "'+txtPekerjaan.Text+'", "'+txtTelp.Text+'", "'+txtAlamat.Text+'", "'+txtAgama.Text+'", "'+IntToStr(jkQ)+'")');
+formConnection.zqOrangTua.ExecSQL;
+
+formConnection.zqOrangTua.SQL.Clear;
+formConnection.zqOrangTua.SQL.Add('SELECT * FROM ortu');
+formConnection.zqOrangTua.ExecSQL;
+
+ShowMessage('DATA BERHASIL DITAMBAH ...');
 end;
 
 end.

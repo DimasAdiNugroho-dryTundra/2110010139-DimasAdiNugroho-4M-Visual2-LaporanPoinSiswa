@@ -266,6 +266,7 @@ object formOrangTua: TformOrangTua
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
+    OnClick = buttonEditClick
   end
   object buttonHapus: TButton
     Left = 728
@@ -280,6 +281,7 @@ object formOrangTua: TformOrangTua
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 3
+    OnClick = buttonHapusClick
   end
   object buttonTambah: TButton
     Left = 608
@@ -294,6 +296,7 @@ object formOrangTua: TformOrangTua
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 4
+    OnClick = buttonTambahClick
   end
   object buttonLaporan: TButton
     Left = 848

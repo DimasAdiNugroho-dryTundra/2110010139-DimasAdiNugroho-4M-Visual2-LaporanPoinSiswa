@@ -77,6 +77,8 @@ formConnection.zqHubungan.SQL.Clear;
 formConnection.zqHubungan.SQL.Add('SELECT * FROM hubungan');
 formConnection.zqHubungan.Active;
 formConnection.zqHubungan.ExecSQL;
+
+ShowMessage('DATA BERHASIL DIUBAH ...');
 end;
 
 procedure TformHubungan.buttonTambahClick(Sender: TObject);
@@ -89,6 +91,8 @@ formConnection.zqHubungan.SQL.Clear;
 formConnection.zqHubungan.SQL.Add('SELECT * FROM hubungan');
 formConnection.zqHubungan.Active;
 formConnection.zqHubungan.ExecSQL;
+
+ShowMessage('DATA BERHASIL DITAMBAH ...');
 end;
 
 procedure TformHubungan.buttonHapusClick(Sender: TObject);
@@ -101,6 +105,8 @@ formConnection.zqHubungan.SQL.Clear;
 formConnection.zqHubungan.SQL.Add('SELECT * FROM hubungan');
 formConnection.zqHubungan.Active;
 formConnection.zqHubungan.ExecSQL;
+
+ShowMessage('DATA BERHASIL DIHAPUS ...');
 end;
 
 end.

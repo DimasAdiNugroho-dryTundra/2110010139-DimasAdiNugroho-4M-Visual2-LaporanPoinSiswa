@@ -21,6 +21,10 @@ type
     buttonHapus: TButton;
     GroupBox1: TGroupBox;
     DBGrid1: TDBGrid;
+    procedure DBGrid1CellClick(Column: TColumn);
+    procedure buttonEditClick(Sender: TObject);
+    procedure buttonTambahClick(Sender: TObject);
+    procedure buttonHapusClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,6 +33,7 @@ type
 
 var
   formPoin: TformPoin;
+  id : string;
 
 implementation
 
@@ -36,5 +41,55 @@ uses
   Connection;
 
 {$R *.dfm}
+
+procedure TformPoin.DBGrid1CellClick(Column: TColumn);
+begin
+id := formConnection.zqPoinAdmin.Fields[0].AsString;
+
+mmNamaPoin.Text := formConnection.zqPoinAdmin.Fields[1].AsString;
+txtBobotPoin.Text := formConnection.zqPoinAdmin.Fields[2].AsString;
+cmbJenisPoin.Text := formConnection.zqPoinAdmin.Fields[3].AsString;
+cmbStatusPoin.Text := formConnection.zqPoinAdmin.Fields[4].AsString;
+end;
+
+procedure TformPoin.buttonEditClick(Sender: TObject);
+begin
+formConnection.zqPoinAdmin.SQL.Clear;
+formConnection.zqPoinAdmin.SQL.Add('UPDATE poin SET nama="'+mmNamaPoin.Text+'", bobot="'+txtBobotPoin.Text+'", jenis="'+cmbJenisPoin.Text+'", status="'+cmbStatusPoin.Text+'" WHERE id="'+id+'"');
+formConnection.zqPoinAdmin.ExecSQL;
+
+formConnection.zqPoinAdmin.SQL.Clear;
+formConnection.zqPoinAdmin.SQL.Add('SELECT * FROM poin');
+formConnection.zqPoinAdmin.Active;
+formConnection.zqPoinAdmin.ExecSQL;
+
+ShowMessage('DATA BERHASIL DIUBAH ...');
+end;
+
+procedure TformPoin.buttonTambahClick(Sender: TObject);
+begin
+formConnection.zqPoinAdmin.SQL.Clear;
+formConnection.zqPoinAdmin.SQL.Add('INSERT INTO poin VALUES(null, "'+mmNamaPoin.Text+'", "'+txtBobotPoin.Text+'", "'+cmbJenisPoin.Text+'", "'+cmbStatusPoin.Text+'")');
+formConnection.zqPoinAdmin.ExecSQL;
+
+formConnection.zqPoinAdmin.SQL.Clear;
+formConnection.zqPoinAdmin.SQL.Add('SELECT * FROM poin');
+formConnection.zqPoinAdmin.ExecSQL;
+
+ShowMessage('DATA BERHASIL DITAMBAH ...');
+end;
+
+procedure TformPoin.buttonHapusClick(Sender: TObject);
+begin
+formConnection.zqPoinAdmin.SQL.Clear;
+formConnection.zqPoinAdmin.SQL.Add('DELETE FROM poin WHERE id="'+id+'")');
+formConnection.zqPoinAdmin.ExecSQL;
+
+formConnection.zqPoinAdmin.SQL.Clear;
+formConnection.zqPoinAdmin.SQL.Add('SELECT * FROM poin');
+formConnection.zqPoinAdmin.ExecSQL;
+
+ShowMessage('DATA BERHASIL DIHAPUS ...');
+end;
 
 end.

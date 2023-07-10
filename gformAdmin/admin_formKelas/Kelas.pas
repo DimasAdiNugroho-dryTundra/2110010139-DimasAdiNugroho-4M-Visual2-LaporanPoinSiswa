@@ -51,6 +51,8 @@ formConnection.zqKelasAdmin.SQL.Clear;
 formConnection.zqKelasAdmin.SQL.Add('SELECT * FROM kelas');
 formConnection.zqKelasAdmin.Active;
 formConnection.zqKelasAdmin.ExecSQL;
+
+ShowMessage('DATA BERHASIL DIUBAH ...');
 end;
 
 procedure TformKelas.buttonTambahClick(Sender: TObject);
@@ -62,6 +64,8 @@ formConnection.zqKelasAdmin.ExecSQL;
 formConnection.zqKelasAdmin.SQL.Clear;
 formConnection.zqKelasAdmin.SQL.Add('SELECT * FROM kelas');
 formConnection.zqKelasAdmin.ExecSQL;
+
+ShowMessage('DATA BERHASIL DITAMBAH ...');
 end;
 
 procedure TformKelas.buttonHapusClick(Sender: TObject);
@@ -74,6 +78,8 @@ formConnection.zqKelasAdmin.SQL.Clear;
 formConnection.zqKelasAdmin.SQL.Add('SELECT * FROM kelas');
 formConnection.zqKelasAdmin.Active;
 formConnection.zqKelasAdmin.ExecSQL;
+
+ShowMessage('DATA BERHASIL DIHAPUS ...');
 end;
 
 procedure TformKelas.dbgrdKelasCellClick(Column: TColumn);

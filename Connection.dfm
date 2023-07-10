@@ -119,7 +119,6 @@ object formConnection: TformConnection
   end
   object zqUserLogin: TZQuery
     Connection = Zconn
-    Active = True
     SQL.Strings = (
       'select * from user')
     Params = <>
@@ -133,7 +132,6 @@ object formConnection: TformConnection
   end
   object zqUserAdmin: TZQuery
     Connection = Zconn
-    Active = True
     SQL.Strings = (
       'SELECT * FROM user')
     Params = <>
@@ -147,7 +145,6 @@ object formConnection: TformConnection
   end
   object zqKelasAdmin: TZQuery
     Connection = Zconn
-    Active = True
     SQL.Strings = (
       'SELECT * FROM kelas')
     Params = <>
@@ -189,7 +186,6 @@ object formConnection: TformConnection
   end
   object zqSiswa: TZQuery
     Connection = Zconn
-    Active = True
     SQL.Strings = (
       'SELECT * FROM siswa')
     Params = <>

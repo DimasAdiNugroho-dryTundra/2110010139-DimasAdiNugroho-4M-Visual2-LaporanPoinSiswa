@@ -169,19 +169,9 @@ object formWaliKelas: TformWaliKelas
       ItemHeight = 19
       ParentFont = False
       TabOrder = 2
-    end
-    object txtAlamat: TMemo
-      Left = 152
-      Top = 152
-      Width = 225
-      Height = 89
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -16
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 3
+      Items.Strings = (
+        'Laki-laki'
+        'Perempuan')
     end
     object txtTelp: TEdit
       Left = 544
@@ -194,7 +184,7 @@ object formWaliKelas: TformWaliKelas
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 3
     end
     object txtMatPel: TEdit
       Left = 544
@@ -207,7 +197,7 @@ object formWaliKelas: TformWaliKelas
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
-      TabOrder = 5
+      TabOrder = 4
     end
     object txtPendidikan: TEdit
       Left = 544
@@ -220,7 +210,7 @@ object formWaliKelas: TformWaliKelas
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
-      TabOrder = 6
+      TabOrder = 5
     end
     object txtStatus: TEdit
       Left = 544
@@ -233,10 +223,23 @@ object formWaliKelas: TformWaliKelas
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      TabOrder = 6
+    end
+    object mmAlamat: TMemo
+      Left = 152
+      Top = 160
+      Width = 225
+      Height = 89
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 7
     end
   end
-  object DBGrid1: TDBGrid
+  object dgWaliKelas: TDBGrid
     Left = 40
     Top = 328
     Width = 561
@@ -248,6 +251,7 @@ object formWaliKelas: TformWaliKelas
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dgWaliKelasCellClick
   end
   object buttonEdit: TButton
     Left = 648
@@ -262,6 +266,7 @@ object formWaliKelas: TformWaliKelas
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
+    OnClick = buttonEditClick
   end
   object buttonHapus: TButton
     Left = 776
@@ -276,6 +281,7 @@ object formWaliKelas: TformWaliKelas
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 3
+    OnClick = buttonHapusClick
   end
   object buttonTambah: TButton
     Left = 648
@@ -290,6 +296,7 @@ object formWaliKelas: TformWaliKelas
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 4
+    OnClick = buttonTambahClick
   end
   object buttonLaporan: TButton
     Left = 776

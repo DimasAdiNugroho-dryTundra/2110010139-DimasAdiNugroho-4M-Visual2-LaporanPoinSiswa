@@ -75,6 +75,8 @@ formConnection.zqUserAdmin.ExecSQL;
 formConnection.zqKelasAdmin.SQL.Clear;
 formConnection.zqKelasAdmin.SQL.Add('SELECT * FROM user');
 formConnection.zqKelasAdmin.ExecSQL;
+
+ShowMessage('DATA BERHASIL DIUBAH ...');
 end;
 
 procedure TformUserAdmin.dgUserCellClick(Column: TColumn);
@@ -117,6 +119,8 @@ formConnection.zqUserAdmin.ExecSQL;
 formConnection.zqKelasAdmin.SQL.Clear;
 formConnection.zqKelasAdmin.SQL.Add('SELECT * FROM user');
 formConnection.zqKelasAdmin.ExecSQL;
+
+ShowMessage('DATA BERHASIL DIHAPUS ...');
 end;
 
 procedure TformUserAdmin.buttonTambahClick(Sender: TObject);
@@ -149,6 +153,8 @@ formConnection.zqUserAdmin.ExecSQL;
 formConnection.zqKelasAdmin.SQL.Clear;
 formConnection.zqKelasAdmin.SQL.Add('SELECT * FROM user');
 formConnection.zqKelasAdmin.ExecSQL;
+
+ShowMessage('DATA BERHASIL DITAMBAH ...');
 end;
 
 procedure TformUserAdmin.buttonLaporanClick(Sender: TObject);
