@@ -257,5 +257,6 @@ object formHubungan: TformHubungan
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 7
+    OnClick = buttonLaporanClick
   end
 end

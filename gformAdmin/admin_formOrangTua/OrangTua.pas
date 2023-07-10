@@ -34,6 +34,7 @@ type
     procedure buttonEditClick(Sender: TObject);
     procedure buttonHapusClick(Sender: TObject);
     procedure buttonTambahClick(Sender: TObject);
+    procedure buttonLaporanClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -47,7 +48,7 @@ var
 implementation
 
 uses
-  Connection, DB;
+  Connection, DB, Report;
 
 {$R *.dfm}
 
@@ -136,6 +137,11 @@ formConnection.zqOrangTua.SQL.Add('SELECT * FROM ortu');
 formConnection.zqOrangTua.ExecSQL;
 
 ShowMessage('DATA BERHASIL DITAMBAH ...');
+end;
+
+procedure TformOrangTua.buttonLaporanClick(Sender: TObject);
+begin
+formReport.frxRptOrangTua.ShowReport();
 end;
 
 end.

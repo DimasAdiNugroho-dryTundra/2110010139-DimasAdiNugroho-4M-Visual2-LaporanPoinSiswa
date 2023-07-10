@@ -30,6 +30,7 @@ type
     procedure buttonEditClick(Sender: TObject);
     procedure buttonTambahClick(Sender: TObject);
     procedure buttonHapusClick(Sender: TObject);
+    procedure buttonLaporanClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,7 +44,8 @@ var
 implementation
 
 uses
-  Connection;
+  Connection,
+  Report;
 
 {$R *.dfm}
 
@@ -107,6 +109,11 @@ formConnection.zqHubungan.Active;
 formConnection.zqHubungan.ExecSQL;
 
 ShowMessage('DATA BERHASIL DIHAPUS ...');
+end;
+
+procedure TformHubungan.buttonLaporanClick(Sender: TObject);
+begin
+formReport.frxRptHubungan.ShowReport();
 end;
 
 end.

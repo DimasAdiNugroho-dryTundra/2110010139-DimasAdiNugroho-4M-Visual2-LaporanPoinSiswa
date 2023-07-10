@@ -43,10 +43,12 @@ type
     txtTelp: TEdit;
     txtHP: TEdit;
     txtStatus: TEdit;
+    buttonLaporan: TButton;
     procedure dgSiswaCellClick(Column: TColumn);
     procedure buttonEditClick(Sender: TObject);
     procedure buttonTambahClick(Sender: TObject);
     procedure buttonHapusClick(Sender: TObject);
+    procedure buttonLaporanClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,7 +62,7 @@ var
 implementation
 
 uses
-  Connection, DB;
+  Connection, DB, Report;
 
 {$R *.dfm}
 
@@ -107,6 +109,11 @@ formConnection.zqSiswa.Active;
 formConnection.zqSiswa.ExecSQL;
 
 ShowMessage('DATA BERHASIL DIHAPUS ...');
+end;
+
+procedure TformSiswa.buttonLaporanClick(Sender: TObject);
+begin
+formReport.frxRptSiswa.ShowReport();
 end;
 
 end.

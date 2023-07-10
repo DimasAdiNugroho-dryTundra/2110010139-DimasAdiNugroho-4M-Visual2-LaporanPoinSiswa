@@ -21,6 +21,18 @@ type
     GroupBox5: TGroupBox;
     frxDsPoin: TfrxDBDataset;
     frxRptPoin: TfrxReport;
+    GroupBox6: TGroupBox;
+    frxDsHubungan: TfrxDBDataset;
+    frxRptHubungan: TfrxReport;
+    GroupBox7: TGroupBox;
+    GroupBox8: TGroupBox;
+    GroupBox9: TGroupBox;
+    frxDsOrangTua: TfrxDBDataset;
+    frxDsWaliKelas: TfrxDBDataset;
+    frxDsSiswa: TfrxDBDataset;
+    frxRptSiswa: TfrxReport;
+    frxRptWaliKelas: TfrxReport;
+    frxRptOrangTua: TfrxReport;
   private
     { Private declarations }
   public

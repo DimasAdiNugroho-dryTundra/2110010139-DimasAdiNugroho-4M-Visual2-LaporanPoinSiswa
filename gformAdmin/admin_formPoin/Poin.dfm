@@ -205,6 +205,6 @@ object formPoin: TformPoin
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 5
-    OnClick = buttonHapusClick
+    OnClick = buttonLaporanClick
   end
 end

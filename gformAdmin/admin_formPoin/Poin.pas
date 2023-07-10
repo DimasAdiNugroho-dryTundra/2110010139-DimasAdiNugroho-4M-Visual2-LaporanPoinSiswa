@@ -26,6 +26,7 @@ type
     procedure buttonEditClick(Sender: TObject);
     procedure buttonTambahClick(Sender: TObject);
     procedure buttonHapusClick(Sender: TObject);
+    procedure buttonLaporanClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,7 +40,8 @@ var
 implementation
 
 uses
-  Connection;
+  Connection,
+  Report;
 
 {$R *.dfm}
 
@@ -91,6 +93,11 @@ formConnection.zqPoinAdmin.SQL.Add('SELECT * FROM poin');
 formConnection.zqPoinAdmin.ExecSQL;
 
 ShowMessage('DATA BERHASIL DIHAPUS ...');
+end;
+
+procedure TformPoin.buttonLaporanClick(Sender: TObject);
+begin
+formReport.frxRptPoin.ShowReport();
 end;
 
 end.

@@ -1,8 +1,8 @@
 object formOrangTua: TformOrangTua
   Left = 192
-  Top = 125
+  Top = 124
   Width = 1044
-  Height = 529
+  Height = 530
   Caption = 'Orang Tua'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -311,5 +311,6 @@ object formOrangTua: TformOrangTua
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 5
+    OnClick = buttonLaporanClick
   end
 end

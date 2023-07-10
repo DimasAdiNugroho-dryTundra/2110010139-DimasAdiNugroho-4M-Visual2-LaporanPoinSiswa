@@ -1,8 +1,8 @@
 object formSiswa: TformSiswa
   Left = 238
-  Top = 134
+  Top = 133
   Width = 1094
-  Height = 636
+  Height = 637
   Caption = 'Siswa'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -481,5 +481,20 @@ object formSiswa: TformSiswa
       ParentFont = False
       TabOrder = 14
     end
+  end
+  object buttonLaporan: TButton
+    Left = 936
+    Top = 224
+    Width = 105
+    Height = 41
+    Caption = 'LAPORAN'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+    OnClick = buttonLaporanClick
   end
 end
