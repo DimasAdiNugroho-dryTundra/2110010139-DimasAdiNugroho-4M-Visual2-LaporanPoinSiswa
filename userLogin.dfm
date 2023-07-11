@@ -45,6 +45,7 @@ object formUserLogin: TformUserLogin
     Top = 64
     Width = 3
     Height = 13
+    Visible = False
   end
   object editUsername: TEdit
     Left = 136

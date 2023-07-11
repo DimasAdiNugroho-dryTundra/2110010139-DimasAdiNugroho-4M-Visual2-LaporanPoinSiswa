@@ -33,6 +33,10 @@ type
     frxRptSiswa: TfrxReport;
     frxRptWaliKelas: TfrxReport;
     frxRptOrangTua: TfrxReport;
+    GroupBox10: TGroupBox;
+    frxRptRiwayatPoin: TfrxReport;
+    frxDsRiwayatPoin: TfrxDBDataset;
+    frxDBDataset1: TfrxDBDataset;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }

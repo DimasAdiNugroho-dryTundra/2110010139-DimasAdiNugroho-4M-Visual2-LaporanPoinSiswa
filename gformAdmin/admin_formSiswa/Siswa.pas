@@ -113,7 +113,7 @@ else if (jkSelect = '0') then
 else
   ShowMessage('error');
 formConnection.zqSiswa.SQL.Clear;
-formConnection.zqSiswa.SQL.Add('UPDATE siswa SET user_id="'+txtIDUser.Text+'", nis="'+txtNIS.Text+'", nisn="'+txtNISN.Text+'", nama_siswa="'+txtNama.Text+'", nik="'+txtNIK.Text+'", tempat_lahir="'+txtTmpLahir.Text+'", jenis_kelamin="'+IntToStr(jkQ)+'", tingkat_kelas="'+txtTktKelas.Text+'", jurusan="'+txtJurusan.Text+'", wali_kelas="'+txtWakel.Text+'", alamat="'+mmAlamat.Text+'", telp="'+txtTelp.Text+'", hp="'+txtHP.Text+'", status="'+txtStatus.Text+'" WHERE id="'+id+'"');
+formConnection.zqSiswa.SQL.Add('UPDATE siswa SET user_id="'+txtIDUser.Text+'", nis="'+txtNIS.Text+'", nisn="'+txtNISN.Text+'", nama_siswa="'+txtNama.Text+'", nik="'+txtNIK.Text+'", tempat_lahir="'+txtTmpLahir.Text+'", tanggal_lahir="null", jenis_kelamin="'+IntToStr(jkQ)+'", tingkat_kelas="'+txtTktKelas.Text+'", jurusan="'+txtJurusan.Text+'", wali_kelas="'+txtWakel.Text+'", alamat="'+mmAlamat.Text+'", telp="'+txtTelp.Text+'", hp="'+txtHP.Text+'", status="'+txtStatus.Text+'" WHERE id="'+id+'"');
 formConnection.zqSiswa.ExecSQL;
 
 formConnection.zqSiswa.SQL.Clear;
@@ -127,7 +127,7 @@ end;
 procedure TformSiswa.buttonTambahClick(Sender: TObject);
 begin
 formConnection.zqSiswa.SQL.Clear;
-formConnection.zqSiswa.SQL.Add('INSERT INTO siswa VALUES(null, "'+txtIDUser.Text+'", "'+txtNIS.Text+'", "'+txtNISN.Text+'", "'+txtNama.Text+'", "'+txtNIK.Text+'", "'+txtTmpLahir.Text+'", "'+cmbJK.Text+'", "'+txtTktKelas.Text+'", "'+txtJurusan.Text+'", "'+txtWakel.Text+'", "'+mmAlamat.Text+'", "'+txtTelp.Text+'", "'+txtHP.Text+'", "'+txtStatus.Text+'")');
+formConnection.zqSiswa.SQL.Add('INSERT INTO siswa VALUES(null, "'+txtIDUser.Text+'", "'+txtNIS.Text+'", "'+txtNISN.Text+'", "'+txtNama.Text+'", "'+txtNIK.Text+'", "'+txtTmpLahir.Text+'", "null", "'+cmbJK.Text+'", "'+txtTktKelas.Text+'", "'+txtJurusan.Text+'", "'+txtWakel.Text+'", "'+mmAlamat.Text+'", "'+txtTelp.Text+'", "'+txtHP.Text+'", "'+txtStatus.Text+'")');
 formConnection.zqSiswa.ExecSQL;
 
 formConnection.zqSiswa.SQL.Clear;

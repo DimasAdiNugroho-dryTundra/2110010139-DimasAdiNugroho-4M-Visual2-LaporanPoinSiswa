@@ -38,6 +38,9 @@ type
     GroupBox1: TGroupBox;
     dsDataDiriSiswa: TDataSource;
     zqDataDiriSiswa: TZQuery;
+    GroupBox2: TGroupBox;
+    dsRiwayatPoin: TDataSource;
+    zqRiwayatPoin: TZQuery;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }

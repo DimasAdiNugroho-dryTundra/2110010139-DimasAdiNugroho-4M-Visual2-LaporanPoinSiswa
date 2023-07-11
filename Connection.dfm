@@ -94,6 +94,14 @@ object formConnection: TformConnection
     Caption = 'Siswa'
     TabOrder = 2
   end
+  object GroupBox2: TGroupBox
+    Left = 16
+    Top = 312
+    Width = 161
+    Height = 105
+    Caption = 'Guru'
+    TabOrder = 3
+  end
   object Zconn: TZConnection
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
@@ -228,7 +236,7 @@ object formConnection: TformConnection
   object dsDataDiriSiswa: TDataSource
     DataSet = zqDataDiriSiswa
     Left = 48
-    Top = 232
+    Top = 216
   end
   object zqDataDiriSiswa: TZQuery
     Connection = Zconn
@@ -237,6 +245,20 @@ object formConnection: TformConnection
       'SELECT * FROM siswa')
     Params = <>
     Left = 120
-    Top = 208
+    Top = 216
+  end
+  object dsRiwayatPoin: TDataSource
+    DataSet = zqRiwayatPoin
+    Left = 40
+    Top = 344
+  end
+  object zqRiwayatPoin: TZQuery
+    Connection = Zconn
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM riwayat_poin')
+    Params = <>
+    Left = 120
+    Top = 344
   end
 end

@@ -83,13 +83,13 @@ end;
 procedure TformUserAdmin.dgUserCellClick(Column: TColumn);
 var
   status, levelName: String;
-  level, index1, index2: Integer;
+  index1, index2: Integer;
 begin
 id := formConnection.zqUserAdmin.Fields[0].AsString;
 txtNama.Text := formConnection.zqUserAdmin.Fields[1].AsString;
 txtPassword.Text := formConnection.zqUserAdmin.Fields[2].AsString;
 
-level := formConnection.zqUserAdmin.Fields[3].AsInteger;
+levelName := formConnection.zqUserAdmin.Fields[3].AsString;
 if (levelName = 'admin') then
   index1 := 0
 else if (levelName = 'guru') then
@@ -104,7 +104,7 @@ cmbLevel.ItemIndex := index1;
 status := formConnection.zqUserAdmin.Fields[4].AsString;
 if (status = '1') then
   index2 := 0
-else if (levelName = '0') then
+else if (status = '0') then
   index2 := 1
 else
   index2 := -1;

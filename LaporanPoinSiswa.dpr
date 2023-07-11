@@ -21,17 +21,17 @@ uses
 begin
   Application.Initialize;
   Application.CreateForm(TformUserLogin, formUserLogin);
-  Application.CreateForm(TformOrangTua, formOrangTua);
+  Application.CreateForm(TformDataDiri, formDataDiri);
+  Application.CreateForm(TformSiswa, formSiswa);
+  Application.CreateForm(TformUserAdmin, formUserAdmin);
+  Application.CreateForm(TformGuru, formGuru);
   Application.CreateForm(TformHubungan, formHubungan);
+  Application.CreateForm(TformOrangTua, formOrangTua);
   Application.CreateForm(TformConnection, formConnection);
   Application.CreateForm(TformAdmin, formAdmin);
-  Application.CreateForm(TformUserAdmin, formUserAdmin);
   Application.CreateForm(TformKelas, formKelas);
   Application.CreateForm(TformPoin, formPoin);
   Application.CreateForm(TformWaliKelas, formWaliKelas);
   Application.CreateForm(TformReport, formReport);
-  Application.CreateForm(TformSiswa, formSiswa);
-  Application.CreateForm(TformDataDiri, formDataDiri);
-  Application.CreateForm(TformGuru, formGuru);
   Application.Run;
 end.
