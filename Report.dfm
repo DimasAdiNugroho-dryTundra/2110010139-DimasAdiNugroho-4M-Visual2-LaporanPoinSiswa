@@ -400,8 +400,16 @@ object formReport: TformReport
     Top = 64
     Datasets = <
       item
-        DataSet = frxDsDataDiriSiswa
+        DataSet = frxDsSiswa
         DataSetName = 'frxDBDataset1'
+      end
+      item
+        DataSet = frxDsRiwayatPoinSiswa
+        DataSetName = 'frxDBDsRiwayatPoin'
+      end
+      item
+        DataSet = frxDsPoin
+        DataSetName = 'frxDSPoin'
       end>
     Variables = <>
     Style = <>
@@ -444,7 +452,7 @@ object formReport: TformReport
         Height = 430.866420000000000000
         Top = 128.504020000000000000
         Width = 740.409927000000000000
-        DataSet = frxDsDataDiriSiswa
+        DataSet = frxDsSiswa
         DataSetName = 'frxDBDataset1'
         RowCount = 0
         object Memo3: TfrxMemoView
@@ -914,6 +922,32 @@ object formReport: TformReport
           ParentFont = False
         end
       end
+      object DetailData1: TfrxDetailData
+        Height = 257.008040000000000000
+        Top = 582.047620000000000000
+        Width = 740.409927000000000000
+        DataSet = frxDsRiwayatPoinSiswa
+        DataSetName = 'frxDBDsRiwayatPoin'
+        RowCount = 0
+        object Memo29: TfrxMemoView
+          Left = 234.330860000000000000
+          Top = 26.456710000000000000
+          Width = 275.905690000000000000
+          Height = 30.236240000000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -21
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Style = fsDouble
+          Frame.Width = 2.000000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'RIWAYAT POIN SISWA')
+          ParentFont = False
+        end
+      end
     end
   end
   object frxDsDataDiriSiswa: TfrxDBDataset
@@ -1151,7 +1185,7 @@ object formReport: TformReport
     end
   end
   object frxDsPoin: TfrxDBDataset
-    UserName = 'frxDBDataset1'
+    UserName = 'frxDSPoin'
     CloseDataSource = False
     DataSet = formConnection.zqPoinAdmin
     BCDToCurrency = False
@@ -1178,7 +1212,7 @@ object formReport: TformReport
     Datasets = <
       item
         DataSet = frxDsPoin
-        DataSetName = 'frxDBDataset1'
+        DataSetName = 'frxDSPoin'
       end>
     Variables = <>
     Style = <>
@@ -1294,7 +1328,7 @@ object formReport: TformReport
         Top = 219.212740000000000000
         Width = 740.409927000000000000
         DataSet = frxDsPoin
-        DataSetName = 'frxDBDataset1'
+        DataSetName = 'frxDSPoin'
         RowCount = 0
         object Memo7: TfrxMemoView
           Left = 60.472480000000000000
@@ -1320,7 +1354,7 @@ object formReport: TformReport
           ShowHint = False
           DataField = 'nama'
           DataSet = frxDsPoin
-          DataSetName = 'frxDBDataset1'
+          DataSetName = 'frxDSPoin'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -16
@@ -1328,7 +1362,7 @@ object formReport: TformReport
           Font.Style = []
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           Memo.UTF8 = (
-            '[frxDBDataset1."nama"]')
+            '[frxDSPoin."nama"]')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -1338,7 +1372,7 @@ object formReport: TformReport
           Height = 37.795300000000000000
           ShowHint = False
           DataSet = frxDsPoin
-          DataSetName = 'frxDBDataset1'
+          DataSetName = 'frxDSPoin'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -16
@@ -1358,7 +1392,7 @@ object formReport: TformReport
           ShowHint = False
           DataField = 'jenis'
           DataSet = frxDsPoin
-          DataSetName = 'frxDBDataset1'
+          DataSetName = 'frxDSPoin'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -16
@@ -1367,7 +1401,7 @@ object formReport: TformReport
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset1."jenis"]')
+            '[frxDSPoin."jenis"]')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -3382,12 +3416,12 @@ object formReport: TformReport
     Left = 936
     Top = 280
   end
-  object frxDBDataset1: TfrxDBDataset
+  object frxDsRiwayatPoinSiswa: TfrxDBDataset
     UserName = 'frxDBDsRiwayatPoin'
     CloseDataSource = False
-    DataSet = formConnection.zqSiswa
+    DataSet = formConnection.zqRiwayatPoin
     BCDToCurrency = False
-    Left = 936
+    Left = 896
     Top = 128
   end
 end

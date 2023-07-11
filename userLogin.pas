@@ -13,8 +13,8 @@ type
     Label2: TLabel;
     Label1: TLabel;
     buttonLogin: TButton;
-    DBGrid1: TDBGrid;
     lblGetID: TLabel;
+    Label3: TLabel;
     procedure buttonLoginClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private

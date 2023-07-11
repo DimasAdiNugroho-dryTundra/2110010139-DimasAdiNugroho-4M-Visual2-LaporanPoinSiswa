@@ -2,7 +2,7 @@ object formUserLogin: TformUserLogin
   Left = 511
   Top = 244
   Width = 420
-  Height = 421
+  Height = 396
   Caption = 'userLogin'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -16,7 +16,7 @@ object formUserLogin: TformUserLogin
   TextHeight = 13
   object Label2: TLabel
     Left = 160
-    Top = 96
+    Top = 192
     Width = 78
     Height = 19
     Caption = 'Password'
@@ -29,7 +29,7 @@ object formUserLogin: TformUserLogin
   end
   object Label1: TLabel
     Left = 160
-    Top = 24
+    Top = 120
     Width = 82
     Height = 19
     Caption = 'Username'
@@ -41,15 +41,28 @@ object formUserLogin: TformUserLogin
     ParentFont = False
   end
   object lblGetID: TLabel
-    Left = 40
-    Top = 64
-    Width = 3
+    Left = 48
+    Top = 296
+    Width = 17
     Height = 13
     Visible = False
   end
+  object Label3: TLabel
+    Left = 72
+    Top = 48
+    Width = 257
+    Height = 19
+    Caption = 'APLIKASI SISTEM POIN SISWA'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object editUsername: TEdit
     Left = 136
-    Top = 56
+    Top = 152
     Width = 137
     Height = 27
     Font.Charset = DEFAULT_CHARSET
@@ -62,7 +75,7 @@ object formUserLogin: TformUserLogin
   end
   object editPassword: TEdit
     Left = 136
-    Top = 128
+    Top = 224
     Width = 137
     Height = 27
     Font.Charset = DEFAULT_CHARSET
@@ -75,7 +88,7 @@ object formUserLogin: TformUserLogin
   end
   object buttonLogin: TButton
     Left = 160
-    Top = 176
+    Top = 272
     Width = 81
     Height = 33
     Caption = 'Login'
@@ -87,18 +100,5 @@ object formUserLogin: TformUserLogin
     ParentFont = False
     TabOrder = 2
     OnClick = buttonLoginClick
-  end
-  object DBGrid1: TDBGrid
-    Left = 40
-    Top = 240
-    Width = 320
-    Height = 120
-    DataSource = formConnection.dsUserLogin
-    TabOrder = 3
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
   end
 end

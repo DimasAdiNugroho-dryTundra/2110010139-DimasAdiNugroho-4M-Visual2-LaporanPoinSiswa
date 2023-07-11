@@ -36,7 +36,7 @@ type
     GroupBox10: TGroupBox;
     frxRptRiwayatPoin: TfrxReport;
     frxDsRiwayatPoin: TfrxDBDataset;
-    frxDBDataset1: TfrxDBDataset;
+    frxDsRiwayatPoinSiswa: TfrxDBDataset;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
